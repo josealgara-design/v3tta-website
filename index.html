@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,UklGRkwDAABXRUJQVlA4WAoAAAAgAAAAPwAAPwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggXgEAAJAIAJ0BKkAAQAA+USiRRaOioZQKBFQ4BQS0gAZk3xApHfvYd7P/dfkB6xPoD/feqd/oeAzJA7ucpGUxKuvZkdEFfLf62a+klpmY70SgAP79OdEj3+fg7Xuu+O9KXCE7H/U+Vzx9///Vr3Mv77n/1KLNHB3DiUnR3fY1JjHdWMZ+Dc/DGk7ylZbcOtp/zGxBW0AuKf4Nf0DRuE8hXA4b3H9v2u+yiq4+w9YWqjc7ZB5PHm9zoaMotRZjhb2H1SOq6As9/xCMvRzZKMYcfm6mmfS3y9nPP+HyPV9291k1aa2ijI3OEvVhWEsUlkDWigx3Ysm6yR9wBpX22g+EHbPipku+/4kbF4dIB0x9HfjZIR0OOUT5wsLKrMgbHRgbtygiQafCYSo7BVoLaRpjyVP/MobslHif//Ml+AK7WsuULZHfly/fjuutIt3zmMPkSo3h34inL43G4CC6j2vAAAAA">
+    
+    <!-- Primary Meta Tags -->
+    <title>V3TTA - Build, Launch & Grow Your Business | Business Consulting & Advisory</title>
+    <meta name="title" content="V3TTA - Build, Launch & Grow Your Business | Business Consulting & Advisory">
+    <meta name="description" content="V3TTA helps entrepreneurs launch, acquire, and scale businesses with hands-on guidance from founders who've built successful companies. We're partners in your success.">
+    <meta name="keywords" content="business consulting, business acquisition, business growth, startup launch, entrepreneurship, business advisory, SBA loans, business valuation">
+    <meta name="author" content="V3TTA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://v3tta.com/">
+    <meta property="og:title" content="V3TTA - Build, Launch & Grow Your Business">
+    <meta property="og:description" content="Hands-on business consulting from founders who've built successful companies. Launch, acquire, or grow your business with expert guidance.">
+    <meta property="og:image" content="https://v3tta.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://v3tta.com/">
+    <meta property="twitter:title" content="V3TTA - Build, Launch & Grow Your Business">
+    <meta property="twitter:description" content="Hands-on business consulting from founders who've built successful companies.">
+    <meta property="twitter:image" content="https://v3tta.com/twitter-image.jpg">
+    
+    <title>V3TTA - Build | Launch | Grow Your Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F5F5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFF;
+            padding: 40px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 160px;
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            display: block;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #F5F5F5 0%, #FFF 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            color: #000;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero .description {
+            font-size: 20px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Brand Promise Section */
+        .brand-promise {
+            padding: 80px 0;
+            background-color: #FFF;
+            color: #333;
+            text-align: center;
+        }
+
+        .brand-promise h2 {
+            font-size: 42px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .brand-promise .promise-text {
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        /* Elevator Pitch */
+        .elevator-pitch {
+            padding: 80px 0;
+            background-color: #FFF;
+        }
+
+        .elevator-pitch h2 {
+            font-size: 42px;
+            color: #000;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .elevator-pitch .pitch-content {
+            font-size: 22px;
+            color: #444;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .elevator-pitch .highlight {
+            color: #000;
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background-color: #F5F5F5;
+        }
+
+        .services-section h2 {
+            font-size: 42px;
+            color: #000;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .service-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .service-card {
+            background-color: #FFF;
+            padding: 60px 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .service-card .icon-container {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .service-card .icon-container svg {
+            width: 120px;
+            height: 120px;
+        }
+
+        .service-card h3 {
+            font-size: 36px;
+            color: #000;
+            margin-bottom: 25px;
+        }
+
+        .service-card p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Carousel Navigation Buttons */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFF;
+            border: none;
+            font-size: 40px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-btn.prev {
+            left: 20px;
+        }
+
+        .carousel-btn.next {
+            right: 20px;
+        }
+
+        /* Carousel Indicators */
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #DDD;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .indicator.active {
+            background-color: #000;
+        }
+
+        .indicator:hover {
+            background-color: #666;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #FFF;
+        }
+
+        .contact-section h2 {
+            font-size: 42px;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-section .intro {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .questionnaire-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #F5F5F5;
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 15px;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            background-color: #FFF;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #FFF;
+            background-color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #FFF;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subtitle {
+                font-size: 20px;
+            }
+
+            .questionnaire-form {
+                padding: 30px 20px;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+
+            .logo img {
+                height: 100px;
+            }
+
+            .service-card .icon-container svg {
+                width: 80px;
+                height: 80px;
+            }
+
+            header {
+                padding: 30px 0;
+            }
+
+            .service-card {
+                padding: 40px 30px;
+            }
+
+            .service-card h3 {
+                font-size: 28px;
+            }
+
+            .service-card p {
+                font-size: 16px;
+            }
+
+            .carousel-btn {
+                font-size: 30px;
+                padding: 5px 15px;
+            }
+
+            .carousel-btn.prev {
+                left: 10px;
+            }
+
+            .carousel-btn.next {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/webp;base64,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" alt="V3TTA - Build | Launch | Grow">
+                </div>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Build Your Business.<br>Launch Your Future.<br>Grow Your Success.</h1>
+            <p class="subtitle">Hands-on guidance from idea to impact.</p>
+        </div>
+    </section>
+
+    <!-- Brand Promise Section -->
+    <section class="brand-promise">
+        <div class="container">
+            <h2>We don't just advise - we partner.<br>
+                We don't just strategize - we execute.<br>
+                We don't just consult - we commit to your success.</h2>
+        </div>
+    </section>
+
+    <!-- Elevator Pitch -->
+    <section class="elevator-pitch">
+        <div class="container">
+            <h2>Your Partners in Success</h2>
+            <p class="pitch-content">
+                V3TTA helps entrepreneurs launch, acquire, and scale businesses with hands-on guidance from founders who've built successful companies and led Fortune 500 operations. <span class="highlight">We're not consultants - we're partners in your success.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2>How We Help You Succeed</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <!-- Service 1 -->
+                    <div class="service-slide active">
+                        <div class="service-card">
+                            <div class="icon-container">
+                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
+                                    <path d="M75 35L65 55L75 60L85 50L75 35Z" fill="#333"/>
+                                    <path d="M60 45C60 45 50 55 45 65C40 75 45 85 45 85C45 85 55 80 65 70C75 60 75 45 75 45L60 45Z" fill="#666"/>
+                                    <ellipse cx="52" cy="62" rx="8" ry="8" fill="#999"/>
+                                    <path d="M35 75L40 85L50 80L45 70L35 75Z" fill="#333"/>
+                                    <path d="M75 85L80 75L70 70L65 80L75 85Z" fill="#333"/>
+                                </svg>
+                            </div>
+                            <h3>Launch Your Business</h3>
+                            <p>
+                                Turn your idea into reality with our comprehensive launch framework. We help you 
+                                analyze the market, develop a solid business plan, calculate investment requirements, 
+                                and create compelling pitches that capture investor attention.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-slide">
+                        <div class="service-card">
+                            <div class="icon-container">
+                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
+                                    <circle cx="52" cy="48" r="20" stroke="#333" stroke-width="4" fill="none"/>
+                                    <path d="M66 62L85 81" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+                                    <circle cx="52" cy="48" r="12" fill="#E8E8E8"/>
+                                    <path d="M48 44L50 48L56 46" stroke="#666" stroke-width="2" stroke-linecap="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3>Acquire a Business</h3>
+                            <p>
+                                Make informed acquisition decisions with our thorough business analysis. We evaluate 
+                                P&L statements, assess business health, determine fair market value, identify risks, 
+                                and help you secure financing through SBA loans and private lenders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-slide">
+                        <div class="service-card">
+                            <div class="icon-container">
+                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
+                                    <!-- Hand -->
+                                    <path d="M35 65C35 65 40 70 45 70C50 70 50 65 50 65L50 50C50 50 52 48 55 48C58 48 60 50 60 50L60 45C60 45 62 43 65 43C68 43 70 45 70 45L70 50C70 50 72 48 75 48C78 48 80 50 80 50L80 70C80 75 75 80 70 80L50 80C45 80 35 75 35 70L35 65Z" fill="#333"/>
+                                    <!-- Growth Chart -->
+                                    <path d="M50 40L55 35L60 38L65 30" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    <circle cx="50" cy="40" r="2" fill="#4CAF50"/>
+                                    <circle cx="55" cy="35" r="2" fill="#4CAF50"/>
+                                    <circle cx="60" cy="38" r="2" fill="#4CAF50"/>
+                                    <circle cx="65" cy="30" r="2" fill="#4CAF50"/>
+                                </svg>
+                            </div>
+                            <h3>Grow Your Business</h3>
+                            <p>
+                                Take your existing business to the next level. We assess your current operations, 
+                                identify opportunities to increase sales, reduce debt, optimize costs, and develop 
+                                actionable strategies for sustainable growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+
+                <!-- Carousel Navigation Arrows -->
+                <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+                <button class="carousel-btn next" aria-label="Next slide">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Questionnaire Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Let's Start Your Journey</h2>
+            <p class="intro">
+                Ready to take the next step? Fill out our questionnaire below and we'll get back to you within 24 hours to discuss how we can help you achieve your business goals.
+            </p>
+            
+            <form class="questionnaire-form" id="contactForm">
+                <!-- Q1 -->
+                <div class="form-group">
+                    <label for="location">1. What is your target location?</label>
+                    <input type="text" id="location" name="location" placeholder="City, State, or Zip Code" required>
+                </div>
+
+                <!-- Q2 -->
+                <div class="form-group">
+                    <label for="distance">2. What is the maximum distance you are willing to travel from your home/office to the business?</label>
+                    <select id="distance" name="distance" required>
+                        <option value="">Select distance...</option>
+                        <option value="10">10 miles</option>
+                        <option value="25">25 miles</option>
+                        <option value="50">50 miles</option>
+                        <option value="100">100 miles</option>
+                        <option value="200">200+ miles</option>
+                    </select>
+                </div>
+
+                <!-- Q3 -->
+                <div class="form-group">
+                    <label>3. Which industry(s) are you primarily interested in?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="industry" value="Retail"> Retail</label>
+                        <label><input type="checkbox" name="industry" value="Service"> Service</label>
+                        <label><input type="checkbox" name="industry" value="Restaurant"> Restaurant</label>
+                        <label><input type="checkbox" name="industry" value="E-commerce"> E-commerce</label>
+                        <label><input type="checkbox" name="industry" value="Health/Fitness"> Health/Fitness</label>
+                        <label><input type="checkbox" name="industry" value="Technology"> Technology</label>
+                        <label><input type="checkbox" name="industry" value="Other"> Other</label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="form-group">
+                    <label for="realEstate">4. Do you require a business with Real Estate Included?</label>
+                    <select id="realEstate" name="realEstate" required>
+                        <option value="">Select option...</option>
+                        <option value="Yes">Yes - Real Estate Included</option>
+                        <option value="No - Leased">No - Leased Only</option>
+                        <option value="No Preference">No Preference</option>
+                    </select>
+                </div>
+
+                <!-- Q5 -->
+                <div class="form-group">
+                    <label for="askingPrice">5. What is your maximum target Asking Price?</label>
+                    <select id="askingPrice" name="askingPrice" required>
+                        <option value="">Select price range...</option>
+                        <option value="Under $100k">Under $100k</option>
+                        <option value="$100k - $250k">$100k - $250k</option>
+                        <option value="$250k - $500k">$250k - $500k</option>
+                        <option value="$500k - $1M">$500k - $1M</option>
+                        <option value="$1M+">$1M+</option>
+                    </select>
+                </div>
+
+                <!-- Q6 -->
+                <div class="form-group">
+                    <label for="cashFlow">6. What is the minimum annual Cash Flow (SDE) you require?</label>
+                    <select id="cashFlow" name="cashFlow" required>
+                        <option value="">Select cash flow range...</option>
+                        <option value="$50k - $100k">$50k - $100k</option>
+                        <option value="$100k - $250k">$100k - $250k</option>
+                        <option value="$250k+">$250k+</option>
+                    </select>
+                </div>
+
+                <!-- Q7 -->
+                <div class="form-group">
+                    <label for="revenue">7. What is the minimum Gross Revenue you are targeting annually?</label>
+                    <select id="revenue" name="revenue" required>
+                        <option value="">Select revenue range...</option>
+                        <option value="$250k - $500k">$250k - $500k</option>
+                        <option value="$500k - $1M">$500k - $1M</option>
+                        <option value="$1M+">$1M+</option>
+                    </select>
+                </div>
+
+                <!-- Q8 -->
+                <div class="form-group">
+                    <label for="involvement">8. What type of owner involvement are you seeking?</label>
+                    <select id="involvement" name="involvement" required>
+                        <option value="">Select involvement type...</option>
+                        <option value="Active Owner-Operator">Active Owner-Operator</option>
+                        <option value="Semi-Absentee">Semi-Absentee (Overseer)</option>
+                        <option value="Passive Investor">Passive Investor</option>
+                    </select>
+                </div>
+
+                <!-- Q9 -->
+                <div class="form-group">
+                    <label for="established">9. How established must the business be?</label>
+                    <select id="established" name="established" required>
+                        <option value="">Select minimum age...</option>
+                        <option value="2+ years">2+ years</option>
+                        <option value="5+ years">5+ years</option>
+                        <option value="10+ years">10+ years</option>
+                    </select>
+                </div>
+
+                <!-- Q10 -->
+                <div class="form-group">
+                    <label for="sellerFinancing">10. Do you require seller financing to be available?</label>
+                    <select id="sellerFinancing" name="sellerFinancing" required>
+                        <option value="">Select option...</option>
+                        <option value="Yes - Required">Yes - Required</option>
+                        <option value="No - Not necessary">No - Not necessary</option>
+                        <option value="Preferred">Preferred</option>
+                    </select>
+                </div>
+
+                <!-- Q11 -->
+                <div class="form-group">
+                    <label for="experience">11. Do you have prior experience owning or managing a business with P&L responsibility?</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experienceDetails">If yes, briefly describe your experience/industry:</label>
+                    <textarea id="experienceDetails" name="experienceDetails" placeholder="Describe your business experience..."></textarea>
+                </div>
+
+                <!-- Q12 -->
+                <div class="form-group">
+                    <label for="licenses">12. Do you currently hold any professional licenses or certifications relevant to a specific industry?</label>
+                    <textarea id="licenses" name="licenses" placeholder="List any relevant licenses or certifications..."></textarea>
+                </div>
+
+                <!-- Q13 -->
+                <div class="form-group">
+                    <label for="reason">13. What is your primary reason for buying an existing business?</label>
+                    <textarea id="reason" name="reason" placeholder="Explain your motivation..." required></textarea>
+                </div>
+
+                <!-- Q14 -->
+                <div class="form-group">
+                    <label for="timeline">14. What is your estimated timeline for completing an acquisition?</label>
+                    <select id="timeline" name="timeline" required>
+                        <option value="">Select timeline...</option>
+                        <option value="Under 3 months">Under 3 months</option>
+                        <option value="3-6 months">3-6 months</option>
+                        <option value="6-12 months">6-12 months</option>
+                        <option value="12+ months">12+ months</option>
+                    </select>
+                </div>
+
+                <!-- Q15 -->
+                <div class="form-group">
+                    <label for="liquidFunds">15. What is the total amount of readily available cash/liquid funds you can commit to a business purchase?</label>
+                    <select id="liquidFunds" name="liquidFunds" required>
+                        <option value="">Select amount...</option>
+                        <option value="$25k - $50k">$25k - $50k</option>
+                        <option value="$50k - $100k">$50k - $100k</option>
+                        <option value="$100k - $250k">$100k - $250k</option>
+                        <option value="$250k+">$250k+</option>
+                    </select>
+                </div>
+
+                <!-- Q16 -->
+                <div class="form-group">
+                    <label for="loanStatus">16. Have you been pre-qualified or pre-approved for a bank loan (e.g., SBA loan)?</label>
+                    <select id="loanStatus" name="loanStatus" required>
+                        <option value="">Select status...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="In Progress">In Progress</option>
+                    </select>
+                </div>
+
+                <!-- Q17 -->
+                <div class="form-group">
+                    <label for="netWorth">17. What is your estimated personal Net Worth?</label>
+                    <select id="netWorth" name="netWorth" required>
+                        <option value="">Select net worth range...</option>
+                        <option value="Under $250k">Under $250k</option>
+                        <option value="$250k-$500k">$250k-$500k</option>
+                        <option value="$500k-$1M">$500k-$1M</option>
+                        <option value="Over $1M">Over $1M</option>
+                    </select>
+                </div>
+
+                <!-- Q18 -->
+                <div class="form-group">
+                    <label for="salary">18. What minimum annual salary/draw do you need the business to provide in its first year?</label>
+                    <select id="salary" name="salary" required>
+                        <option value="">Select salary requirement...</option>
+                        <option value="$50,000">$50,000</option>
+                        <option value="$75,000">$75,000</option>
+                        <option value="$100,000">$100,000</option>
+                        <option value="$150,000+">$150,000+</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Questionnaire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 V3TTA. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                BUILD | LAUNCH | GROW - Your partners in business success.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.service-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+        let autoRotateInterval;
+
+        function showSlide(index) {
+            // Wrap around if needed
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            // Move slides
+            const slidesContainer = document.querySelector('.carousel-slides');
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Auto-rotate every 5 seconds
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoRotate() {
+            clearInterval(autoRotateInterval);
+        }
+
+        // Navigation button event listeners
+        document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+            nextSlide();
+            stopAutoRotate();
+            startAutoRotate(); // Restart auto-rotate after manual interaction
+        });
+
+        document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+            prevSlide();
+            stopAutoRotate();
+            startAutoRotate();
+        });
+
+        // Indicator click events
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                stopAutoRotate();
+                startAutoRotate();
+            });
+        });
+
+        // Pause auto-rotate on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+        carouselContainer.addEventListener('mouseleave', startAutoRotate);
+
+        // Start auto-rotate on page load
+        startAutoRotate();
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            
+            // In a real implementation, you would send this to your backend
+            // For now, we'll just show a confirmation
+            alert('Thank you for your submission! We will review your information and get back to you within 24 hours.');
+            
+            // Optional: Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
