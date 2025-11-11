@@ -1,57 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="data:image/png;base64,UklGRkwDAABXRUJQVlA4WAoAAAAgAAAAPwAAPwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggXgEAAJAIAJ0BKkAAQAA+USiRRaOioZQKBFQ4BQS0gAZk3xApHfvYd7P/dfkB6xPoD/feqd/oeAzJA7ucpGUxKuvZkdEFfLf62a+klpmY70SgAP79OdEj3+fg7Xuu+O9KXCE7H/U+Vzx9///Vr3Mv77n/1KLNHB3DiUnR3fY1JjHdWMZ+Dc/DGk7ylZbcOtp/zGxBW0AuKf4Nf0DRuE8hXA4b3H9v2u+yiq4+w9YWqjc7ZB5PHm9zoaMotRZjhb2H1SOq6As9/xCMvRzZKMYcfm6mmfS3y9nPP+HyPV9291k1aa2ijI3OEvVhWEsUlkDWigx3Ysm6yR9wBpX22g+EHbPipku+/4kbF4dIB0x9HfjZIR0OOUT5wsLKrMgbHRgbtygiQafCYSo7BVoLaRpjyVP/MobslHif//Ml+AK7WsuULZHfly/fjuutIt3zmMPkSo3h34inL43G4CC6j2vAAAAA">
-    
-    <!-- Primary Meta Tags -->
-    <title>V3TTA - Build, Launch & Grow Your Business | Business Consulting & Advisory</title>
-    <meta name="title" content="V3TTA - Build, Launch & Grow Your Business | Business Consulting & Advisory">
-    <meta name="description" content="V3TTA helps entrepreneurs launch, acquire, and scale businesses with hands-on guidance from founders who've built successful companies. We're partners in your success.">
-    <meta name="keywords" content="business consulting, business acquisition, business growth, startup launch, entrepreneurship, business advisory, SBA loans, business valuation">
-    <meta name="author" content="V3TTA">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://v3tta.com/">
-    <meta property="og:title" content="V3TTA - Build, Launch & Grow Your Business">
-    <meta property="og:description" content="Hands-on business consulting from founders who've built successful companies. Launch, acquire, or grow your business with expert guidance.">
-    <meta property="og:image" content="https://v3tta.com/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://v3tta.com/">
-    <meta property="twitter:title" content="V3TTA - Build, Launch & Grow Your Business">
-    <meta property="twitter:description" content="Hands-on business consulting from founders who've built successful companies.">
-    <meta property="twitter:image" content="https://v3tta.com/twitter-image.jpg">
-    
-    <title>V3TTA - Build | Launch | Grow Your Business</title>
+    <title data-en="V3TTA - Build | Launch | Grow Your Business" data-es="V3TTA - Construye | Lanza | Crece Tu Negocio">V3TTA - Build | Launch | Grow Your Business</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F5F5F5;
+            background-color: #FDFBF7;
             color: #333;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Header - FIXED: Reduced padding from 40px to 20px */
         header {
             background-color: #FFF;
-            padding: 40px 0;
+            padding: 20px 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
@@ -67,15 +43,18 @@
         .logo {
             display: flex;
             align-items: center;
-            flex-shrink: 0;
         }
 
+        /* FIXED: Logo height reduced from 120px to 60px */
         .logo img {
-            height: 160px;
+            height: 60px;
             width: auto;
-            max-width: none;
             object-fit: contain;
-            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         nav a {
@@ -87,373 +66,565 @@
         }
 
         nav a:hover {
-            color: #000;
+            color: #3d4f5c;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            margin-left: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .lang-switcher button {
+            background: none;
+            border: none;
+            color: #555;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .lang-switcher button:hover {
+            color: #3d4f5c;
+        }
+
+        .lang-switcher button.active {
+            color: #3d4f5c;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .lang-separator {
+            color: #DDD;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #F5F5F5 0%, #FFF 100%);
-            padding: 100px 0;
+            background: linear-gradient(135deg, #F5F1E8 0%, #FFF 100%);
+            padding: 80px 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 56px;
-            color: #000;
+            font-size: 48px;
+            color: #2C3E50;
             margin-bottom: 20px;
             font-weight: 700;
-            line-height: 1.2;
         }
 
         .hero .subtitle {
-            font-size: 24px;
-            color: #555;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .hero .description {
-            font-size: 20px;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Brand Promise Section */
-        .brand-promise {
-            padding: 80px 0;
-            background-color: #FFF;
-            color: #333;
-            text-align: center;
-        }
-
-        .brand-promise h2 {
-            font-size: 42px;
-            margin-bottom: 40px;
-            font-weight: 300;
-            line-height: 1.6;
-        }
-
-        .brand-promise .promise-text {
-            font-size: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        /* Elevator Pitch */
-        .elevator-pitch {
-            padding: 80px 0;
-            background-color: #FFF;
-        }
-
-        .elevator-pitch h2 {
-            font-size: 42px;
-            color: #000;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .elevator-pitch .pitch-content {
             font-size: 22px;
-            color: #444;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
             line-height: 1.8;
         }
 
-        .elevator-pitch .highlight {
-            color: #000;
-            font-weight: 600;
+        .hero .tagline {
+            font-size: 18px;
+            color: #777;
+            max-width: 800px;
+            margin: 0 auto 40px;
         }
 
-        /* Services Section */
-        .services-section {
+        /* Who We Are Section */
+        .who-we-are {
             padding: 80px 0;
-            background-color: #F5F5F5;
+            background-color: #FFF;
         }
 
-        .services-section h2 {
-            font-size: 42px;
-            color: #000;
+        .who-we-are h2 {
+            font-size: 36px;
+            color: #2C3E50;
             margin-bottom: 50px;
             text-align: center;
         }
 
-        /* Carousel Container */
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .founder-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .founder-bio h3 {
+            font-size: 28px;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .founder-bio .title {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .founder-bio p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .founder-bio .highlights {
+            margin-top: 25px;
+        }
+
+        .founder-bio .highlights h4 {
+            font-size: 20px;
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+
+        .founder-bio ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .founder-bio ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .founder-bio ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3d4f5c;
+            font-weight: bold;
+        }
+
+        /* Services Carousel */
+        .services-section {
+            padding: 80px 0;
+            background-color: #FDFBF7;
+        }
+
+        .services-section h2 {
+            font-size: 36px;
+            color: #2C3E50;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
         .carousel-container {
             position: relative;
-            max-width: 900px;
-            margin: 0 auto;
             overflow: hidden;
         }
 
-        .carousel-slides {
+        .carousel {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
 
-        .service-slide {
-            min-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
         .service-card {
+            min-width: 100%;
+            padding: 40px;
             background-color: #FFF;
-            padding: 60px 50px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            text-align: center;
-            max-width: 800px;
-            width: 100%;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
 
-        .service-card .icon-container {
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
-        .service-card .icon-container svg {
-            width: 120px;
-            height: 120px;
+        /* FIXED: Service icons reduced from 120px to 100px with object-fit */
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            display: block;
+            object-fit: contain;
         }
 
         .service-card h3 {
-            font-size: 36px;
-            color: #000;
-            margin-bottom: 25px;
+            font-size: 28px;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .service-card p {
             font-size: 18px;
             color: #666;
+            margin-bottom: 20px;
             line-height: 1.8;
         }
 
-        /* Carousel Navigation Buttons */
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+        .service-card .cta {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3d4f5c;
             color: #FFF;
-            border: none;
-            font-size: 40px;
-            padding: 10px 20px;
-            cursor: pointer;
+            text-decoration: none;
             border-radius: 5px;
+            font-weight: 600;
             transition: background-color 0.3s;
-            z-index: 10;
         }
 
-        .carousel-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        .service-card .cta:hover {
+            background-color: #2C3E50;
         }
 
-        .carousel-btn.prev {
-            left: 20px;
-        }
-
-        .carousel-btn.next {
-            right: 20px;
-        }
-
-        /* Carousel Indicators */
-        .carousel-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        .carousel-dots {
+            text-align: center;
             margin-top: 30px;
         }
 
-        .indicator {
+        .dot {
+            display: inline-block;
             width: 12px;
             height: 12px;
             border-radius: 50%;
             background-color: #DDD;
+            margin: 0 5px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
-        .indicator.active {
-            background-color: #000;
+        .dot.active {
+            background-color: #3d4f5c;
         }
 
-        .indicator:hover {
-            background-color: #666;
-        }
-
-        /* Contact Form Section */
-        .contact-section {
+        /* Detail Sections */
+        .detail-section {
+            display: none;
             padding: 80px 0;
             background-color: #FFF;
         }
 
-        .contact-section h2 {
-            font-size: 42px;
-            color: #000;
+        .detail-section.active {
+            display: block;
+        }
+
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #3d4f5c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #2C3E50;
+        }
+
+        .detail-content h2 {
+            font-size: 36px;
+            color: #2C3E50;
+            margin-bottom: 30px;
+        }
+
+        .detail-content h3 {
+            font-size: 24px;
+            color: #2C3E50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .detail-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .detail-content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .detail-content ul li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .template-preview {
+            background-color: #F5F1E8;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta-section {
+            background-color: #F5F1E8;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta-section h3 {
+            font-size: 28px;
+            color: #2C3E50;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #3d4f5c;
+            color: #FFF;
+        }
+
+        .btn-primary:hover {
+            background-color: #2C3E50;
+        }
+
+        .btn-secondary {
+            background-color: #FFF;
+            color: #3d4f5c;
+            border: 2px solid #3d4f5c;
+        }
+
+        .btn-secondary:hover {
+            background-color: #3d4f5c;
+            color: #FFF;
+        }
+
+        /* Questionnaire Section - FIXED: Gradient background to match Hero */
+        .questionnaire-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F5F1E8 0%, #FFF 100%);
+        }
+
+        .questionnaire-section h2 {
+            font-size: 36px;
+            color: #2C3E50;
             margin-bottom: 20px;
             text-align: center;
         }
 
-        .contact-section .intro {
+        .questionnaire-intro {
+            text-align: center;
             font-size: 18px;
             color: #666;
-            text-align: center;
             max-width: 700px;
             margin: 0 auto 50px;
         }
 
+        /* FIXED: White background with shadow instead of beige */
         .questionnaire-form {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            background-color: #F5F5F5;
-            padding: 50px;
-            border-radius: 15px;
+            background-color: #FFF;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
-            font-size: 16px;
             font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
+            color: #2C3E50;
+            margin-bottom: 8px;
+            font-size: 16px;
         }
 
-        .form-group input[type="text"],
-        .form-group input[type="number"],
+        .form-group label .required {
+            color: #e74c3c;
+            margin-left: 3px;
+        }
+
+        .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
-            font-size: 15px;
+            padding: 12px;
             border: 1px solid #DDD;
             border-radius: 5px;
-            background-color: #FFF;
+            font-size: 16px;
             font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3d4f5c;
         }
 
         .form-group textarea {
-            min-height: 100px;
             resize: vertical;
-        }
-
-        .form-group select {
-            cursor: pointer;
-        }
-
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .checkbox-group label {
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
+            min-height: 100px;
         }
 
         .submit-btn {
             width: 100%;
-            padding: 18px;
-            font-size: 18px;
-            font-weight: 600;
+            padding: 15px;
+            background-color: #3d4f5c;
             color: #FFF;
-            background-color: #000;
             border: none;
             border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .submit-btn:hover {
-            background-color: #333;
+            background-color: #2C3E50;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: #FDFBF7;
+        }
+
+        .faq-section h2 {
+            font-size: 36px;
+            color: #2C3E50;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background-color: #FFF;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            color: #2C3E50;
+            font-size: 18px;
+            position: relative;
+            padding-right: 50px;
+        }
+
+        .faq-question:after {
+            content: '+';
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question:after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 500px;
         }
 
         /* Footer */
         footer {
-            background-color: #000;
+            background-color: #2C3E50;
             color: #FFF;
             padding: 40px 0;
             text-align: center;
         }
 
         footer p {
-            opacity: 0.8;
+            margin: 5px 0;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
             .hero .subtitle {
-                font-size: 20px;
+                font-size: 18px;
             }
 
-            .questionnaire-form {
-                padding: 30px 20px;
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            nav a {
-                margin-left: 15px;
-                font-size: 14px;
-            }
-
-            .logo img {
-                height: 100px;
-            }
-
-            .service-card .icon-container svg {
-                width: 80px;
-                height: 80px;
-            }
-
-            header {
-                padding: 30px 0;
-            }
-
-            .service-card {
-                padding: 40px 30px;
+            .founder-image {
+                max-width: 300px;
+                margin: 0 auto;
             }
 
             .service-card h3 {
-                font-size: 28px;
+                font-size: 24px;
             }
 
-            .service-card p {
-                font-size: 16px;
+            .cta-buttons {
+                flex-direction: column;
             }
 
-            .carousel-btn {
-                font-size: 30px;
-                padding: 5px 15px;
+            nav {
+                flex-direction: column;
+                gap: 15px;
             }
 
-            .carousel-btn.prev {
-                left: 10px;
+            nav a {
+                margin-left: 0;
             }
 
-            .carousel-btn.next {
-                right: 10px;
+            .lang-switcher {
+                margin-left: 0;
+                margin-top: 10px;
             }
         }
     </style>
@@ -464,457 +635,474 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="data:image/webp;base64,UklGRtIJAABXRUJQVlA4WAoAAAAgAAAAjwEAxwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDgg5AcAAHA1AJ0BKpAByAA+USaRRqOiIaEhckiYcAoJaW7hdrEb7Gj+wdr39T6IDxp7f/t3pDfx36ofof675+f5zwt9SHqBfif8U/1v5JflzyGcqvqBduv9h/YORH5dvcA/ln9A/3Pqx/o/EC8Y9gD+ff2f/reyj/Jf9D/T+cr8//vv/b9wf+U/2H/rf3ftE+i1+1QWQ7TVLqp8ULNh2mqXVT4oWbDtNUuqnxQs2HaapdVPihZsO01S6qfFCzYdpql1U+KFmw7TVLqp8ULNh2Oh2jDkFygXfgnUDZr9IXA22jkttqQ1g71sgkX5MvK1vXynQG78mhXyZbuBT3tGzuCJ4grEq6z/ukcLNh2mqW86aaYmkOCVIGevWsHoYGOkEsH/lVNiucPVJu+RMVlTZKOGGURrQVkAUpT7NUuqnwlxzecB0AcfL5Iiq6vqGTEHwbHifUSdhsEWm+icKd6hCIRHn9pfxEVlQfJc/cqtA52QgcEzzoqZOKDzucSchvsl9NUuqnxQs2HaapdVPihZsO01S6qfFCzYdpql1U+KFmw7TVLqp8ULNh2mqXVT4oWbDtNUuqnxQs2HaSAA/v/k3wAABun0GpTfb78Hgn5iQdPykIakX6lw8avQlghlA6dMIY2n5lfp6QmC0jcokzUID/pCmoJ/XZt8OC4oOzCwZrgVko5ZOfRVlgouKBRz5C5pj73evBBgrjBBsLMDO/DlsUO78WJjvFhj9Ai9t3yaE+qzdN/j0EgXc5NC3aFizP9sm+uvqO5i8oJdJCxfp/5aKol9ljvMgBy8QrUgGnmh8E/2opX56kIqSPskM3MGO8N/ZpIj6YaQv8/q+T9F81RjKZ5kdmxvrUDn90KT9QvMyq1JuO/qpmoMN9lXNPn9OEN3pGMJxFVe0SHrDdqaRX6VqP/837/wF8T+xpAemiG+2rzsDtb0nZdTAXLDgRcKowIQFpwivMI1zS/w2dwO+6tSwxPCOVUvAN7HnFVrSc/xT4zRa0viDVJb0JuSBSfEuY+XQjaVFYijvnX+3Z4oPJN/JNuaKmvhryABieqwzVQS7GX1PHKyCIH3AG5K/FFG3R1UPGL8RPNxaIYzu9N6FfkV+UNmNrzTWqn88IO3tiZqq8bWnpX9blxC385j+6PQOLj6otlWZcMOMGJ6013IKfUHP47L9+54sWSX4J/tryVz/kRpeVrD3TLV8GtnxFVFiJX+B6y7byH+REoGqWXdSgqucn9228MzrkuwuzDrn60D6/FMN0RouYrY6JoUhH/Ya4dzaJ0JibkeCEcFPGCzEccDmVRTDRYcYgcvKCC4ViU669DINc3gKfUO0m8hPoNukDZK5dgAyyspiGcjPJNaCbAHQKXEdQNgYmyyh48LNZnThbj7pzbM7i/1B+JZHGmXRVzEOBUHUXjhyULP9f/dMSPaAXOvxMS9/SNQSk4dUY6tzx00YWT5UcQchIW/4cgY5eaERoCE1kvtuZygfz/d+9r4/XqDBs0wT9ZcajfU7S7bJiikuYvcPfLdpqJ1qtWKmumUZ7sKbgakq1E3UKSyUIIDvJhuG6bJxNz93Vwxu8gRbbBCAYUxSc/tsZImyD9sizJIM88uqGTQJhdEkeMQt3AWpnUhTY0r1xrq/5gYmZtQ9eQPJ9XcIoX1b3IcNKzEKmerooVdxLl7OVQCtgpf7I+NDRk2TjFe0exlqnS2P7Mw4U41b7N8i8Lr6sM3UAcGk6z+U3X3yOgHS7SI2fnd9QsiTpKbkf0h9/j/VGk+nyppGhZ+Gg8w5BW58/+xD+1rXw8TckhFFTYJESPBVoYzD5R0rPcCdn28pLYe++MiCFS+Po97d/cc6jpidDSaJkdkAnhGtBlXcR6JtQ8uTHot8C+nvQ2yxV4/0A/5nmWKaW7BA928JvecRIo3dg+n0fPiJ6XdOG72lzjGgQxWDj3wy9qs/vn5Kj0CdqsG3V9D+l1+GJ2iK0C5UQnQ63cmkk/2n4dKQ3b+tVEVkp4LPUmhVIybvHMwu19TJsBgrPc4/Lp2Y1v/RbT2zPPP0RNJ+7ruAZQik7chMN2mVgIpBWsOkB3jMKJNDk/HIf8hI078dg61V3aoSao+vMrQj1Jzbk945h0L22UthlRysDAkvPNF2Tba1XlzN9Axh8CDrtpqX+2Gbj6fODXW82Km2SPRhqPbQR+OhsGH+QFloLEHxU3UUhPDo+l/UiG7LoR5U7/0mh7oGzU5/Z4wOOkjqvsO3SOlcswRl3ix3UpvTw1vUvhWhy+8LMecVtfcOP/l/ByHXgO5Ygl6eIJl6/IpJeEWJj2s7mJz9LHklAUM+4TnHqxaKzXGZD5AoS3143NeVbEAOqi8XtQkOiuVdpRrFOmQ/e6DTsUJ4BqTUXoVYWKAea5FPJUw5RdAeV3aJMomefEeHr8pkBgIjx0rrGt65WP9640//ADC2GETJym13hTB/iZqHNk5x8YPfPIB9ljp9tKTp9c+vn2iW+z79PxSfZI3p6baGQD4zo4aiEMeaWmZCysRUvBjOif4jq53STCDTV73MELjsUMzPijNwKJviMzUB+tpC26NfGZqDww4Gg6u/AaOLxKoizwGYwf+Ff5ELxyD0tPGxtCQ5laHtanguu0IXF00q/jdDP4I8nio0ePcJ0QQxjox+yePdA6lVGtxdtwvLy/cK0MqSDfBJ81sIzvIy2HMuDa++bMawAAAAAAAAAA=" alt="V3TTA - Build | Launch | Grow">
+                    <img src="03_V3TTA_Website_Header.png" alt="V3TTA Logo">
                 </div>
                 <nav>
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+                    <a href="#who-we-are" data-en="Who We Are" data-es="Quiénes Somos">Who We Are</a>
+                    <a href="#questionnaire" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                    <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+                    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                    <div class="lang-switcher">
+                        <span class="lang-separator">|</span>
+                        <button onclick="switchLanguage('en')" class="active" id="lang-en">English</button>
+                        <span>/</span>
+                        <button onclick="switchLanguage('es')" id="lang-es">Español</button>
+                    </div>
                 </nav>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <h1>Build Your Business.<br>Launch Your Future.<br>Grow Your Success.</h1>
-            <p class="subtitle">Hands-on guidance from idea to impact.</p>
-        </div>
-    </section>
-
-    <!-- Brand Promise Section -->
-    <section class="brand-promise">
-        <div class="container">
-            <h2>We don't just advise - we partner.<br>
-                We don't just strategize - we execute.<br>
-                We don't just consult - we commit to your success.</h2>
-        </div>
-    </section>
-
-    <!-- Elevator Pitch -->
-    <section class="elevator-pitch">
-        <div class="container">
-            <h2>Your Partners in Success</h2>
-            <p class="pitch-content">
-                V3TTA helps entrepreneurs launch, acquire, and scale businesses with hands-on guidance from founders who've built successful companies and led Fortune 500 operations. <span class="highlight">We're not consultants - we're partners in your success.</span>
+            <h1 data-en="Build Your Business. Launch Your Future. Grow Your Success." data-es="Construye Tu Negocio. Lanza Tu Futuro. Crece Tu Éxito.">
+                Build Your Business. Launch Your Future. Grow Your Success.
+            </h1>
+            <p class="subtitle" data-en="Hands-on guidance from idea to impact." data-es="Guía práctica desde la idea hasta el impacto.">
+                Hands-on guidance from idea to impact.
             </p>
+            <p class="tagline" data-en="We don't just advise - we partner. We don't just strategize - we execute. We don't just consult - we commit to your success." data-es="No solo asesoramos - somos socios. No solo estratégicamente planificamos - ejecutamos. No solo consultamos - nos comprometemos con tu éxito.">
+                We don't just advise - we partner. We don't just strategize - we execute. We don't just consult - we commit to your success.
+            </p>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="who-we-are" id="who-we-are">
+        <div class="container">
+            <h2 data-en="Who We Are" data-es="Quiénes Somos">Who We Are</h2>
+            <div class="founder-grid">
+                <img src="Jose6.png" alt="Jose Algara" class="founder-image">
+                <div class="founder-bio">
+                    <h3 data-en="Jose Algara" data-es="José Algara">Jose Algara</h3>
+                    <p class="title" data-en="Founder & Managing Partner" data-es="Fundador y Socio Director">Founder & Managing Partner</p>
+                    
+                    <p data-en="With over 20 years of experience building and scaling startups and Fortune 500 companies, Jose brings a unique combination of entrepreneurial insight and enterprise-level expertise to V3TTA. His background spans operations, supply chain, logistics, and inventory management across some of the world's most recognized brands." data-es="Con más de 20 años de experiencia construyendo y escalando startups y empresas Fortune 500, José aporta una combinación única de perspectiva empresarial y experiencia a nivel corporativo a V3TTA. Su experiencia abarca operaciones, cadena de suministro, logística y gestión de inventario en algunas de las marcas más reconocidas del mundo.">
+                        With over 20 years of experience building and scaling startups and Fortune 500 companies, Jose brings a unique combination of entrepreneurial insight and enterprise-level expertise to V3TTA. His background spans operations, supply chain, logistics, and inventory management across some of the world's most recognized brands.
+                    </p>
+                    
+                    <p data-en="Jose has led transformational initiatives at Nordstrom, Maersk, and Flexport, delivering multi-million dollar savings while improving service levels. His hands-on approach has resulted in achievements like 28% inventory cost reduction and near-doubling of on-time delivery rates." data-es="José ha liderado iniciativas transformacionales en Nordstrom, Maersk y Flexport, generando ahorros multimillonarios mientras mejoraba los niveles de servicio. Su enfoque práctico ha resultado en logros como reducción del 28% en costos de inventario y casi duplicar las tasas de entrega a tiempo.">
+                        Jose has led transformational initiatives at Nordstrom, Maersk, and Flexport, delivering multi-million dollar savings while improving service levels. His hands-on approach has resulted in achievements like 28% inventory cost reduction and near-doubling of on-time delivery rates.
+                    </p>
+
+                    <div class="highlights">
+                        <h4 data-en="Experience Highlights:" data-es="Aspectos Destacados de Experiencia:">Experience Highlights:</h4>
+                        <ul>
+                            <li data-en="Led operations at Amazon, building teams from 1 to 300+ people" data-es="Lideró operaciones en Amazon, construyendo equipos de 1 a más de 300 personas">Led operations at Amazon, building teams from 1 to 300+ people</li>
+                            <li data-en="Built and scaled ride-hailing platform across 30+ cities in Latin America" data-es="Construyó y escaló plataforma de transporte en más de 30 ciudades en Latinoamérica">Built and scaled ride-hailing platform across 30+ cities in Latin America</li>
+                            <li data-en="Managed multi-billion dollar P&L at global logistics companies" data-es="Gestionó P&L multimillonario en empresas de logística global">Managed multi-billion dollar P&L at global logistics companies</li>
+                            <li data-en="Specialized in AI-powered optimization and automation" data-es="Especializado en optimización y automatización impulsada por IA">Specialized in AI-powered optimization and automation</li>
+                        </ul>
+                    </div>
+
+                    <p data-en="At V3TTA, Jose applies this Fortune 500 rigor with startup agility to help entrepreneurs launch, acquire, and scale businesses with confidence." data-es="En V3TTA, José aplica este rigor de Fortune 500 con la agilidad de startup para ayudar a emprendedores a lanzar, adquirir y escalar negocios con confianza.">
+                        At V3TTA, Jose applies this Fortune 500 rigor with startup agility to help entrepreneurs launch, acquire, and scale businesses with confidence.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services-section" id="services">
         <div class="container">
-            <h2>How We Help You Succeed</h2>
-            
+            <h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
             <div class="carousel-container">
-                <div class="carousel-slides">
-                    <!-- Service 1 -->
-                    <div class="service-slide active">
-                        <div class="service-card">
-                            <div class="icon-container">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
-                                    <path d="M75 35L65 55L75 60L85 50L75 35Z" fill="#333"/>
-                                    <path d="M60 45C60 45 50 55 45 65C40 75 45 85 45 85C45 85 55 80 65 70C75 60 75 45 75 45L60 45Z" fill="#666"/>
-                                    <ellipse cx="52" cy="62" rx="8" ry="8" fill="#999"/>
-                                    <path d="M35 75L40 85L50 80L45 70L35 75Z" fill="#333"/>
-                                    <path d="M75 85L80 75L70 70L65 80L75 85Z" fill="#333"/>
-                                </svg>
-                            </div>
-                            <h3>Launch Your Business</h3>
-                            <p>
-                                Turn your idea into reality with our comprehensive launch framework. We help you 
-                                analyze the market, develop a solid business plan, calculate investment requirements, 
-                                and create compelling pitches that capture investor attention.
-                            </p>
-                        </div>
+                <div class="carousel" id="carousel">
+                    <!-- Service 1: Launch -->
+                    <div class="service-card" onclick="showDetail(1)">
+                        <img src="1762888648806_image.png" alt="Launch Icon" class="service-icon">
+                        <h3 data-en="Launch Your Business" data-es="Lanza Tu Negocio">Launch Your Business</h3>
+                        <p data-en="Turn your idea into a viable business. We help you validate your concept, develop a go-to-market strategy, and build the foundation for sustainable growth." data-es="Convierte tu idea en un negocio viable. Te ayudamos a validar tu concepto, desarrollar una estrategia de salida al mercado y construir la base para un crecimiento sostenible.">
+                            Turn your idea into a viable business. We help you validate your concept, develop a go-to-market strategy, and build the foundation for sustainable growth.
+                        </p>
+                        <a href="#" class="cta" data-en="Learn More" data-es="Saber Más">Learn More</a>
                     </div>
 
-                    <!-- Service 2 -->
-                    <div class="service-slide">
-                        <div class="service-card">
-                            <div class="icon-container">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
-                                    <circle cx="52" cy="48" r="20" stroke="#333" stroke-width="4" fill="none"/>
-                                    <path d="M66 62L85 81" stroke="#333" stroke-width="6" stroke-linecap="round"/>
-                                    <circle cx="52" cy="48" r="12" fill="#E8E8E8"/>
-                                    <path d="M48 44L50 48L56 46" stroke="#666" stroke-width="2" stroke-linecap="round" fill="none"/>
-                                </svg>
-                            </div>
-                            <h3>Acquire a Business</h3>
-                            <p>
-                                Make informed acquisition decisions with our thorough business analysis. We evaluate 
-                                P&L statements, assess business health, determine fair market value, identify risks, 
-                                and help you secure financing through SBA loans and private lenders.
-                            </p>
-                        </div>
+                    <!-- Service 2: Acquire -->
+                    <div class="service-card" onclick="showDetail(2)">
+                        <img src="1762888643727_image.png" alt="Acquire Icon" class="service-icon">
+                        <h3 data-en="Acquire a Business" data-es="Adquiere un Negocio">Acquire a Business</h3>
+                        <p data-en="Skip the startup phase and buy an existing business. We guide you through due diligence, valuation, and negotiation to ensure you make a smart acquisition." data-es="Salta la fase de startup y compra un negocio existente. Te guiamos a través de due diligence, valuación y negociación para asegurar una adquisición inteligente.">
+                            Skip the startup phase and buy an existing business. We guide you through due diligence, valuation, and negotiation to ensure you make a smart acquisition.
+                        </p>
+                        <a href="#" class="cta" data-en="Learn More" data-es="Saber Más">Learn More</a>
                     </div>
 
-                    <!-- Service 3 -->
-                    <div class="service-slide">
-                        <div class="service-card">
-                            <div class="icon-container">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
-                                    <!-- Hand -->
-                                    <path d="M35 65C35 65 40 70 45 70C50 70 50 65 50 65L50 50C50 50 52 48 55 48C58 48 60 50 60 50L60 45C60 45 62 43 65 43C68 43 70 45 70 45L70 50C70 50 72 48 75 48C78 48 80 50 80 50L80 70C80 75 75 80 70 80L50 80C45 80 35 75 35 70L35 65Z" fill="#333"/>
-                                    <!-- Growth Chart -->
-                                    <path d="M50 40L55 35L60 38L65 30" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    <circle cx="50" cy="40" r="2" fill="#4CAF50"/>
-                                    <circle cx="55" cy="35" r="2" fill="#4CAF50"/>
-                                    <circle cx="60" cy="38" r="2" fill="#4CAF50"/>
-                                    <circle cx="65" cy="30" r="2" fill="#4CAF50"/>
-                                </svg>
-                            </div>
-                            <h3>Grow Your Business</h3>
-                            <p>
-                                Take your existing business to the next level. We assess your current operations, 
-                                identify opportunities to increase sales, reduce debt, optimize costs, and develop 
-                                actionable strategies for sustainable growth.
-                            </p>
-                        </div>
+                    <!-- Service 3: Grow -->
+                    <div class="service-card" onclick="showDetail(3)">
+                        <img src="1762888653494_image.png" alt="Grow Icon" class="service-icon">
+                        <h3 data-en="Grow Your Business" data-es="Crece Tu Negocio">Grow Your Business</h3>
+                        <p data-en="Scale your operations and increase profitability. We identify growth opportunities, optimize processes, and provide strategic guidance to take your business to the next level." data-es="Escala tus operaciones y aumenta la rentabilidad. Identificamos oportunidades de crecimiento, optimizamos procesos y brindamos guía estratégica para llevar tu negocio al siguiente nivel.">
+                            Scale your operations and increase profitability. We identify growth opportunities, optimize processes, and provide strategic guidance to take your business to the next level.
+                        </p>
+                        <a href="#" class="cta" data-en="Learn More" data-es="Saber Más">Learn More</a>
                     </div>
                 </div>
-
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1"></span>
-                    <span class="indicator" data-slide="2"></span>
-                </div>
-
-                <!-- Carousel Navigation Arrows -->
-                <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
-                <button class="carousel-btn next" aria-label="Next slide">›</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="moveCarousel(0)"></span>
+                <span class="dot" onclick="moveCarousel(1)"></span>
+                <span class="dot" onclick="moveCarousel(2)"></span>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Questionnaire Section -->
-    <section class="contact-section" id="contact">
+    <!-- Detail Section 1: Launch -->
+    <section class="detail-section" id="launch">
         <div class="container">
-            <h2>Let's Start Your Journey</h2>
-            <p class="intro">
-                Ready to take the next step? Fill out our questionnaire below and we'll get back to you within 24 hours to discuss how we can help you achieve your business goals.
-            </p>
-            
-            <form class="questionnaire-form" id="contactForm" method="POST" action="https://formspree.io/f/xvgdogld">
-                <!-- Contact Information -->
-                <div class="form-group">
-                    <label for="fullName">Your Full Name *</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
-                </div>
+            <div class="detail-content">
+                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;" data-en="← Back to Services" data-es="← Volver a Servicios">← Back to Services</a>
+                
+                <h2 data-en="Launch Your Business from Idea to Reality" data-es="Lanza Tu Negocio de la Idea a la Realidad">Launch Your Business from Idea to Reality</h2>
+                
+                <p data-en="Starting a business is exciting, but it can also be overwhelming. Our Launch service provides a structured framework to turn your concept into a thriving business. We combine strategic planning with tactical execution support." data-es="Comenzar un negocio es emocionante, pero también puede ser abrumador. Nuestro servicio de Lanzamiento proporciona un marco estructurado para convertir tu concepto en un negocio próspero. Combinamos planificación estratégica con soporte de ejecución táctica.">
+                    Starting a business is exciting, but it can also be overwhelming. Our Launch service provides a structured framework to turn your concept into a thriving business. We combine strategic planning with tactical execution support.
+                </p>
 
-                <div class="form-group">
-                    <label for="email">Your Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                </div>
+                <h3 data-en="What We Cover" data-es="Lo Que Cubrimos">What We Cover</h3>
+                <ul>
+                    <li data-en="Business Model Validation: Testing your assumptions and validating market demand" data-es="Validación del Modelo de Negocio: Probando tus supuestos y validando la demanda del mercado"><strong>Business Model Validation:</strong> Testing your assumptions and validating market demand</li>
+                    <li data-en="Competitive Analysis: Understanding your market landscape and positioning" data-es="Análisis Competitivo: Entendiendo tu panorama de mercado y posicionamiento"><strong>Competitive Analysis:</strong> Understanding your market landscape and positioning</li>
+                    <li data-en="Financial Modeling: Creating realistic projections and budgets" data-es="Modelado Financiero: Creando proyecciones y presupuestos realistas"><strong>Financial Modeling:</strong> Creating realistic projections and budgets</li>
+                    <li data-en="Go-to-Market Strategy: Developing your launch plan and marketing approach" data-es="Estrategia de Salida al Mercado: Desarrollando tu plan de lanzamiento y enfoque de marketing"><strong>Go-to-Market Strategy:</strong> Developing your launch plan and marketing approach</li>
+                    <li data-en="Operations Setup: Establishing systems, processes, and infrastructure" data-es="Configuración de Operaciones: Estableciendo sistemas, procesos e infraestructura"><strong>Operations Setup:</strong> Establishing systems, processes, and infrastructure</li>
+                    <li data-en="Funding Strategy: Guidance on bootstrapping, loans, or investor fundraising" data-es="Estrategia de Financiamiento: Guía sobre bootstrapping, préstamos o recaudación de inversores"><strong>Funding Strategy:</strong> Guidance on bootstrapping, loans, or investor fundraising</li>
+                </ul>
 
-                <div class="form-group">
-                    <label for="phone">Your Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                </div>
+                <h3 data-en="The Result" data-es="El Resultado">The Result</h3>
+                <p data-en="You'll walk away with a comprehensive business plan, financial models, and a clear 90-day action plan. More importantly, you'll have the confidence and clarity to execute on your vision." data-es="Te irás con un plan de negocios integral, modelos financieros y un plan de acción claro de 90 días. Más importante aún, tendrás la confianza y claridad para ejecutar tu visión.">
+                    You'll walk away with a comprehensive business plan, financial models, and a clear 90-day action plan. More importantly, you'll have the confidence and clarity to execute on your vision.
+                </p>
 
-                <hr style="margin: 40px 0; border: none; border-top: 1px solid #DDD;">
-
-                <!-- Q1 -->
-                <div class="form-group">
-                    <label for="location">1. What is your target location?</label>
-                    <input type="text" id="location" name="location" placeholder="City, State, or Zip Code" required>
-                </div>
-
-                <!-- Q2 -->
-                <div class="form-group">
-                    <label for="distance">2. What is the maximum distance you are willing to travel from your home/office to the business?</label>
-                    <select id="distance" name="distance" required>
-                        <option value="">Select distance...</option>
-                        <option value="10">10 miles</option>
-                        <option value="25">25 miles</option>
-                        <option value="50">50 miles</option>
-                        <option value="100">100 miles</option>
-                        <option value="200">200+ miles</option>
-                    </select>
-                </div>
-
-                <!-- Q3 -->
-                <div class="form-group">
-                    <label>3. Which industry(s) are you primarily interested in?</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="industry" value="Retail"> Retail</label>
-                        <label><input type="checkbox" name="industry" value="Service"> Service</label>
-                        <label><input type="checkbox" name="industry" value="Restaurant"> Restaurant</label>
-                        <label><input type="checkbox" name="industry" value="E-commerce"> E-commerce</label>
-                        <label><input type="checkbox" name="industry" value="Health/Fitness"> Health/Fitness</label>
-                        <label><input type="checkbox" name="industry" value="Technology"> Technology</label>
-                        <label><input type="checkbox" name="industry" value="Other"> Other</label>
+                <div class="cta-section">
+                    <h3 data-en="Ready to Launch?" data-es="¿Listo Para Lanzar?">Ready to Launch?</h3>
+                    <p data-en="Let's turn your idea into a business plan" data-es="Convirtamos tu idea en un plan de negocios">Let's turn your idea into a business plan</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:info@v3tta.com" class="btn btn-primary" data-en="Send Us an Email" data-es="Envíanos un Email">Send Us an Email</a>
+                        <a href="#questionnaire" class="btn btn-secondary" data-en="Get Started" data-es="Comenzar">Get Started</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Q4 -->
+    <!-- Detail Section 2: Acquire -->
+    <section class="detail-section" id="acquire">
+        <div class="container">
+            <div class="detail-content">
+                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;" data-en="← Back to Services" data-es="← Volver a Servicios">← Back to Services</a>
+                
+                <h2 data-en="Acquire a Business with Confidence" data-es="Adquiere un Negocio con Confianza">Acquire a Business with Confidence</h2>
+                
+                <p data-en="Buying an existing business can be faster and less risky than starting from scratch—if you know what to look for. Our acquisition advisory service helps you find, evaluate, and successfully acquire businesses that align with your goals." data-es="Comprar un negocio existente puede ser más rápido y menos arriesgado que comenzar desde cero, si sabes qué buscar. Nuestro servicio de asesoría de adquisición te ayuda a encontrar, evaluar y adquirir con éxito negocios que se alineen con tus objetivos.">
+                    Buying an existing business can be faster and less risky than starting from scratch—if you know what to look for. Our acquisition advisory service helps you find, evaluate, and successfully acquire businesses that align with your goals.
+                </p>
+
+                <h3 data-en="What We Analyze" data-es="Lo Que Analizamos">What We Analyze</h3>
+                <ul>
+                    <li data-en="Financial Performance: In-depth P&L analysis, cash flow review, and financial health assessment" data-es="Desempeño Financiero: Análisis profundo de P&L, revisión de flujo de caja y evaluación de salud financiera"><strong>Financial Performance:</strong> In-depth P&L analysis, cash flow review, and financial health assessment</li>
+                    <li data-en="Business Valuation: Fair market value determination and offer price recommendations" data-es="Valuación de Negocio: Determinación de valor justo de mercado y recomendaciones de precio de oferta"><strong>Business Valuation:</strong> Fair market value determination and offer price recommendations</li>
+                    <li data-en="Risk Assessment: Identification of potential red flags, liabilities, and operational risks" data-es="Evaluación de Riesgo: Identificación de posibles señales de alerta, responsabilidades y riesgos operativos"><strong>Risk Assessment:</strong> Identification of potential red flags, liabilities, and operational risks</li>
+                    <li data-en="Growth Potential: Analysis of expansion opportunities and untapped revenue streams" data-es="Potencial de Crecimiento: Análisis de oportunidades de expansión y flujos de ingresos sin explotar"><strong>Growth Potential:</strong> Analysis of expansion opportunities and untapped revenue streams</li>
+                    <li data-en="Financing Strategy: Guidance on SBA loans, seller financing, and private lending options" data-es="Estrategia de Financiamiento: Guía sobre préstamos SBA, financiamiento del vendedor y opciones de préstamos privados"><strong>Financing Strategy:</strong> Guidance on SBA loans, seller financing, and private lending options</li>
+                </ul>
+
+                <h3 data-en="Why This Matters" data-es="Por Qué Esto Importa">Why This Matters</h3>
+                <p data-en="A thorough analysis can save you from costly mistakes and help you negotiate better terms. We provide objective, data-driven insights so you can acquire with confidence." data-es="Un análisis exhaustivo puede ahorrarte errores costosos y ayudarte a negociar mejores términos. Proporcionamos perspectivas objetivas basadas en datos para que puedas adquirir con confianza.">
+                    A thorough analysis can save you from costly mistakes and help you negotiate better terms. We provide objective, data-driven insights so you can acquire with confidence.
+                </p>
+
+                <div class="cta-section">
+                    <h3 data-en="Found a Business to Acquire?" data-es="¿Encontraste un Negocio Para Adquirir?">Found a Business to Acquire?</h3>
+                    <p data-en="Let's analyze the opportunity together and ensure it's the right move" data-es="Analicemos la oportunidad juntos y aseguremos que es la decisión correcta">Let's analyze the opportunity together and ensure it's the right move</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:info@v3tta.com" class="btn btn-primary" data-en="Send Us an Email" data-es="Envíanos un Email">Send Us an Email</a>
+                        <a href="#questionnaire" class="btn btn-secondary" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Section 3: Grow -->
+    <section class="detail-section" id="grow">
+        <div class="container">
+            <div class="detail-content">
+                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;" data-en="← Back to Services" data-es="← Volver a Servicios">← Back to Services</a>
+                
+                <h2 data-en="Grow Your Business to New Heights" data-es="Crece Tu Negocio a Nuevas Alturas">Grow Your Business to New Heights</h2>
+                
+                <p data-en="Running a business is challenging, and knowing where to focus your efforts can be difficult. We provide fresh perspective and actionable strategies to accelerate your growth." data-es="Administrar un negocio es desafiante, y saber dónde enfocar tus esfuerzos puede ser difícil. Proporcionamos perspectiva fresca y estrategias accionables para acelerar tu crecimiento.">
+                    Running a business is challenging, and knowing where to focus your efforts can be difficult. We provide fresh perspective and actionable strategies to accelerate your growth.
+                </p>
+
+                <h3 data-en="What We Assess" data-es="Lo Que Evaluamos">What We Assess</h3>
+                <ul>
+                    <li data-en="Current State Analysis: Comprehensive review of operations, financials, and market position" data-es="Análisis del Estado Actual: Revisión integral de operaciones, finanzas y posición de mercado"><strong>Current State Analysis:</strong> Comprehensive review of operations, financials, and market position</li>
+                    <li data-en="Revenue Growth Opportunities: Identification of new revenue streams and sales optimization strategies" data-es="Oportunidades de Crecimiento de Ingresos: Identificación de nuevos flujos de ingresos y estrategias de optimización de ventas"><strong>Revenue Growth Opportunities:</strong> Identification of new revenue streams and sales optimization strategies</li>
+                    <li data-en="Cost Reduction: Analysis of operating expenses and recommendations for efficiency improvements" data-es="Reducción de Costos: Análisis de gastos operativos y recomendaciones para mejoras de eficiencia"><strong>Cost Reduction:</strong> Analysis of operating expenses and recommendations for efficiency improvements</li>
+                    <li data-en="Debt Management: Strategies to reduce and restructure business debt" data-es="Gestión de Deuda: Estrategias para reducir y reestructurar deuda empresarial"><strong>Debt Management:</strong> Strategies to reduce and restructure business debt</li>
+                    <li data-en="Operational Excellence: Process improvements and systems to scale effectively" data-es="Excelencia Operacional: Mejoras de procesos y sistemas para escalar efectivamente"><strong>Operational Excellence:</strong> Process improvements and systems to scale effectively</li>
+                    <li data-en="Strategic Planning: 12-month roadmap with clear milestones and KPIs" data-es="Planificación Estratégica: Hoja de ruta de 12 meses con hitos claros y KPIs"><strong>Strategic Planning:</strong> 12-month roadmap with clear milestones and KPIs</li>
+                </ul>
+
+                <h3 data-en="The Outcome" data-es="El Resultado">The Outcome</h3>
+                <p data-en="You'll receive a detailed action plan with prioritized initiatives, financial projections, and ongoing support to ensure successful implementation. We help you work ON your business, not just IN it." data-es="Recibirás un plan de acción detallado con iniciativas priorizadas, proyecciones financieras y soporte continuo para asegurar una implementación exitosa. Te ayudamos a trabajar EN tu negocio, no solo DENTRO de él.">
+                    You'll receive a detailed action plan with prioritized initiatives, financial projections, and ongoing support to ensure successful implementation. We help you work ON your business, not just IN it.
+                </p>
+
+                <div class="cta-section">
+                    <h3 data-en="Ready to Scale?" data-es="¿Listo Para Escalar?">Ready to Scale?</h3>
+                    <p data-en="Let's unlock your business's full potential together" data-es="Desbloqueemos el potencial completo de tu negocio juntos">Let's unlock your business's full potential together</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:info@v3tta.com" class="btn btn-primary" data-en="Send Us an Email" data-es="Envíanos un Email">Send Us an Email</a>
+                        <a href="#questionnaire" class="btn btn-secondary" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questionnaire Section -->
+    <section class="questionnaire-section" id="questionnaire">
+        <div class="container">
+            <h2 data-en="Let's Start Your Journey" data-es="Comencemos Tu Camino">Let's Start Your Journey</h2>
+            <p class="questionnaire-intro" data-en="Answer a few quick questions so we can better understand your needs and provide tailored guidance." data-es="Responde algunas preguntas rápidas para que podamos entender mejor tus necesidades y proporcionar orientación personalizada.">
+                Answer a few quick questions so we can better understand your needs and provide tailored guidance.
+            </p>
+            
+            <form class="questionnaire-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
-                    <label for="realEstate">4. Do you require a business with Real Estate Included?</label>
-                    <select id="realEstate" name="realEstate" required>
-                        <option value="">Select option...</option>
-                        <option value="Yes">Yes - Real Estate Included</option>
-                        <option value="No - Leased">No - Leased Only</option>
-                        <option value="No Preference">No Preference</option>
+                    <label data-en="Name" data-es="Nombre">
+                        Name <span class="required">*</span>
+                    </label>
+                    <input type="text" name="name" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Email" data-es="Correo Electrónico">
+                        Email <span class="required">*</span>
+                    </label>
+                    <input type="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Phone Number" data-es="Número de Teléfono">
+                        Phone Number <span class="required">*</span>
+                    </label>
+                    <input type="tel" name="phone" required placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="What is your estimated timeline for completing an acquisition?" data-es="¿Cuál es tu cronograma estimado para completar una adquisición?">
+                        What is your estimated timeline for completing an acquisition? <span class="required">*</span>
+                    </label>
+                    <select name="timeline" required>
+                        <option value="" data-en="Select a timeline..." data-es="Selecciona un cronograma...">Select a timeline...</option>
+                        <option value="0-3" data-en="0-3 months" data-es="0-3 meses">0-3 months</option>
+                        <option value="3-6" data-en="3-6 months" data-es="3-6 meses">3-6 months</option>
+                        <option value="6-12" data-en="6-12 months" data-es="6-12 meses">6-12 months</option>
+                        <option value="12+" data-en="12+ months" data-es="12+ meses">12+ months</option>
+                        <option value="exploring" data-en="Just exploring" data-es="Solo explorando">Just exploring</option>
                     </select>
                 </div>
 
-                <!-- Q5 -->
                 <div class="form-group">
-                    <label for="askingPrice">5. What is your maximum target Asking Price?</label>
-                    <select id="askingPrice" name="askingPrice" required>
-                        <option value="">Select price range...</option>
-                        <option value="Under $100k">Under $100k</option>
-                        <option value="$100k - $250k">$100k - $250k</option>
-                        <option value="$250k - $500k">$250k - $500k</option>
-                        <option value="$500k - $1M">$500k - $1M</option>
-                        <option value="$1M+">$1M+</option>
-                    </select>
+                    <label data-en="Additional Information (Optional)" data-es="Información Adicional (Opcional)">
+                        Additional Information (Optional)
+                    </label>
+                    <textarea name="additional" placeholder="Tell us more about your goals, challenges, or questions..."></textarea>
                 </div>
 
-                <!-- Q6 -->
-                <div class="form-group">
-                    <label for="cashFlow">6. What is the minimum annual Cash Flow (SDE) you require?</label>
-                    <select id="cashFlow" name="cashFlow" required>
-                        <option value="">Select cash flow range...</option>
-                        <option value="$50k - $100k">$50k - $100k</option>
-                        <option value="$100k - $250k">$100k - $250k</option>
-                        <option value="$250k+">$250k+</option>
-                    </select>
-                </div>
-
-                <!-- Q7 -->
-                <div class="form-group">
-                    <label for="revenue">7. What is the minimum Gross Revenue you are targeting annually?</label>
-                    <select id="revenue" name="revenue" required>
-                        <option value="">Select revenue range...</option>
-                        <option value="$250k - $500k">$250k - $500k</option>
-                        <option value="$500k - $1M">$500k - $1M</option>
-                        <option value="$1M+">$1M+</option>
-                    </select>
-                </div>
-
-                <!-- Q8 -->
-                <div class="form-group">
-                    <label for="involvement">8. What type of owner involvement are you seeking?</label>
-                    <select id="involvement" name="involvement" required>
-                        <option value="">Select involvement type...</option>
-                        <option value="Active Owner-Operator">Active Owner-Operator</option>
-                        <option value="Semi-Absentee">Semi-Absentee (Overseer)</option>
-                        <option value="Passive Investor">Passive Investor</option>
-                    </select>
-                </div>
-
-                <!-- Q9 -->
-                <div class="form-group">
-                    <label for="established">9. How established must the business be?</label>
-                    <select id="established" name="established" required>
-                        <option value="">Select minimum age...</option>
-                        <option value="2+ years">2+ years</option>
-                        <option value="5+ years">5+ years</option>
-                        <option value="10+ years">10+ years</option>
-                    </select>
-                </div>
-
-                <!-- Q10 -->
-                <div class="form-group">
-                    <label for="sellerFinancing">10. Do you require seller financing to be available?</label>
-                    <select id="sellerFinancing" name="sellerFinancing" required>
-                        <option value="">Select option...</option>
-                        <option value="Yes - Required">Yes - Required</option>
-                        <option value="No - Not necessary">No - Not necessary</option>
-                        <option value="Preferred">Preferred</option>
-                    </select>
-                </div>
-
-                <!-- Q11 -->
-                <div class="form-group">
-                    <label for="experience">11. Do you have prior experience owning or managing a business with P&L responsibility?</label>
-                    <select id="experience" name="experience" required>
-                        <option value="">Select...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="experienceDetails">If yes, briefly describe your experience/industry:</label>
-                    <textarea id="experienceDetails" name="experienceDetails" placeholder="Describe your business experience..."></textarea>
-                </div>
-
-                <!-- Q12 -->
-                <div class="form-group">
-                    <label for="licenses">12. Do you currently hold any professional licenses or certifications relevant to a specific industry?</label>
-                    <textarea id="licenses" name="licenses" placeholder="List any relevant licenses or certifications..."></textarea>
-                </div>
-
-                <!-- Q13 -->
-                <div class="form-group">
-                    <label for="reason">13. What is your primary reason for buying an existing business?</label>
-                    <textarea id="reason" name="reason" placeholder="Explain your motivation..." required></textarea>
-                </div>
-
-                <!-- Q14 -->
-                <div class="form-group">
-                    <label for="timeline">14. What is your estimated timeline for completing an acquisition?</label>
-                    <select id="timeline" name="timeline" required>
-                        <option value="">Select timeline...</option>
-                        <option value="Under 3 months">Under 3 months</option>
-                        <option value="3-6 months">3-6 months</option>
-                        <option value="6-12 months">6-12 months</option>
-                        <option value="12+ months">12+ months</option>
-                    </select>
-                </div>
-
-                <!-- Q15 -->
-                <div class="form-group">
-                    <label for="liquidFunds">15. What is the total amount of readily available cash/liquid funds you can commit to a business purchase?</label>
-                    <select id="liquidFunds" name="liquidFunds" required>
-                        <option value="">Select amount...</option>
-                        <option value="$25k - $50k">$25k - $50k</option>
-                        <option value="$50k - $100k">$50k - $100k</option>
-                        <option value="$100k - $250k">$100k - $250k</option>
-                        <option value="$250k+">$250k+</option>
-                    </select>
-                </div>
-
-                <!-- Q16 -->
-                <div class="form-group">
-                    <label for="loanStatus">16. Have you been pre-qualified or pre-approved for a bank loan (e.g., SBA loan)?</label>
-                    <select id="loanStatus" name="loanStatus" required>
-                        <option value="">Select status...</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                        <option value="In Progress">In Progress</option>
-                    </select>
-                </div>
-
-                <!-- Q17 -->
-                <div class="form-group">
-                    <label for="netWorth">17. What is your estimated personal Net Worth?</label>
-                    <select id="netWorth" name="netWorth" required>
-                        <option value="">Select net worth range...</option>
-                        <option value="Under $250k">Under $250k</option>
-                        <option value="$250k-$500k">$250k-$500k</option>
-                        <option value="$500k-$1M">$500k-$1M</option>
-                        <option value="Over $1M">Over $1M</option>
-                    </select>
-                </div>
-
-                <!-- Q18 -->
-                <div class="form-group">
-                    <label for="salary">18. What minimum annual salary/draw do you need the business to provide in its first year?</label>
-                    <select id="salary" name="salary" required>
-                        <option value="">Select salary requirement...</option>
-                        <option value="$50,000">$50,000</option>
-                        <option value="$75,000">$75,000</option>
-                        <option value="$100,000">$100,000</option>
-                        <option value="$150,000+">$150,000+</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="submit-btn">Submit Questionnaire</button>
+                <button type="submit" class="submit-btn" data-en="Submit" data-es="Enviar">Submit</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
         <div class="container">
-            <p>&copy; 2024 V3TTA. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 14px;">
-                BUILD | LAUNCH | GROW - Your partners in business success.
+            <h2 data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+            
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question" data-en="What types of businesses do you work with?" data-es="¿Con qué tipos de negocios trabajan?">
+                    What types of businesses do you work with?
+                </div>
+                <div class="faq-answer" data-en="We work with small to medium-sized businesses across various industries. Whether you're in retail, services, technology, or manufacturing, our frameworks and methodologies can be adapted to your specific needs. We've helped clients in e-commerce, professional services, franchises, and more." data-es="Trabajamos con pequeñas y medianas empresas en varias industrias. Ya sea que estés en retail, servicios, tecnología o manufactura, nuestros marcos y metodologías pueden adaptarse a tus necesidades específicas. Hemos ayudado a clientes en e-commerce, servicios profesionales, franquicias y más.">
+                    We work with small to medium-sized businesses across various industries. Whether you're in retail, services, technology, or manufacturing, our frameworks and methodologies can be adapted to your specific needs. We've helped clients in e-commerce, professional services, franchises, and more.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question" data-en="How long does a typical engagement last?" data-es="¿Cuánto dura un compromiso típico?">
+                    How long does a typical engagement last?
+                </div>
+                <div class="faq-answer" data-en="Engagement length varies based on the service and your needs. A business launch consultation typically takes 4-8 weeks, acquisition analysis 2-4 weeks, and growth strategy development 6-12 weeks. We can also provide ongoing advisory support for implementation." data-es="La duración del compromiso varía según el servicio y tus necesidades. Una consulta de lanzamiento de negocio típicamente toma 4-8 semanas, análisis de adquisición 2-4 semanas, y desarrollo de estrategia de crecimiento 6-12 semanas. También podemos proporcionar soporte de asesoría continua para la implementación.">
+                    Engagement length varies based on the service and your needs. A business launch consultation typically takes 4-8 weeks, acquisition analysis 2-4 weeks, and growth strategy development 6-12 weeks. We can also provide ongoing advisory support for implementation.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question" data-en="What's included in your pricing?" data-es="¿Qué incluye su precio?">
+                    What's included in your pricing?
+                </div>
+                <div class="faq-answer" data-en="Our pricing is customized based on the scope of work. Typical packages include all analysis, templates, financial models, strategy documents, and a specified number of consultation hours. We'll provide a detailed proposal after our initial discovery call." data-es="Nuestro precio se personaliza según el alcance del trabajo. Los paquetes típicos incluyen todo el análisis, plantillas, modelos financieros, documentos de estrategia y un número específico de horas de consulta. Proporcionaremos una propuesta detallada después de nuestra llamada inicial de descubrimiento.">
+                    Our pricing is customized based on the scope of work. Typical packages include all analysis, templates, financial models, strategy documents, and a specified number of consultation hours. We'll provide a detailed proposal after our initial discovery call.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question" data-en="Do you provide ongoing support after the initial engagement?" data-es="¿Proporcionan soporte continuo después del compromiso inicial?">
+                    Do you provide ongoing support after the initial engagement?
+                </div>
+                <div class="faq-answer" data-en="Yes! We offer several ongoing support options including monthly advisory retainers, implementation support packages, and ad-hoc consulting. Many clients find value in having us as a strategic partner as they execute their plans." data-es="¡Sí! Ofrecemos varias opciones de soporte continuo incluyendo retenes de asesoría mensual, paquetes de soporte de implementación y consultoría ad-hoc. Muchos clientes encuentran valor en tenernos como socio estratégico mientras ejecutan sus planes.">
+                    Yes! We offer several ongoing support options including monthly advisory retainers, implementation support packages, and ad-hoc consulting. Many clients find value in having us as a strategic partner as they execute their plans.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question" data-en="What makes your approach different?" data-es="¿Qué hace diferente su enfoque?">
+                    What makes your approach different?
+                </div>
+                <div class="faq-answer" data-en="We combine Fortune 500 rigor with startup agility. You get enterprise-grade analysis and frameworks at accessible pricing. We focus on practical, actionable recommendations rather than lengthy reports that sit on shelves. Our founders have walked the path you're on and bring real-world experience to every engagement." data-es="Combinamos el rigor de Fortune 500 con la agilidad de startup. Obtienes análisis y marcos de nivel empresarial a precios accesibles. Nos enfocamos en recomendaciones prácticas y accionables en lugar de informes largos que se quedan en estantes. Nuestros fundadores han recorrido el camino que estás recorriendo y aportan experiencia del mundo real a cada compromiso.">
+                    We combine Fortune 500 rigor with startup agility. You get enterprise-grade analysis and frameworks at accessible pricing. We focus on practical, actionable recommendations rather than lengthy reports that sit on shelves. Our founders have walked the path you're on and bring real-world experience to every engagement.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question" data-en="How do I get started?" data-es="¿Cómo empiezo?">
+                    How do I get started?
+                </div>
+                <div class="faq-answer" data-en="Simply reach out via email or fill out our questionnaire. We'll discuss your situation, answer questions, and determine if we're a good fit. There's no obligation, and you'll leave with valuable insights regardless." data-es="Simplemente contáctanos por correo electrónico o completa nuestro cuestionario. Discutiremos tu situación, responderemos preguntas y determinaremos si somos un buen ajuste. No hay obligación, y te irás con perspectivas valiosas de todos modos.">
+                    Simply reach out via email or fill out our questionnaire. We'll discuss your situation, answer questions, and determine if we're a good fit. There's no obligation, and you'll leave with valuable insights regardless.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 V3TTA. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            <p style="margin-top: 10px; font-size: 14px;" data-en="Build | Launch | Grow - Empowering entrepreneurs to reach new heights." data-es="Construye | Lanza | Crece - Empoderando emprendedores para alcanzar nuevas alturas.">
+                Build | Launch | Grow - Empowering entrepreneurs to reach new heights.
+            </p>
+            <p style="margin-top: 10px;">
+                <a href="mailto:info@v3tta.com" style="color: #FFF; text-decoration: none;">info@v3tta.com</a>
             </p>
         </div>
     </footer>
 
     <script>
-        // Carousel functionality
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.service-slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalSlides = slides.length;
-        let autoRotateInterval;
+        let currentLanguage = 'en';
 
-        function showSlide(index) {
-            // Wrap around if needed
-            if (index >= totalSlides) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else {
-                currentSlide = index;
+        // Carousel functionality
+        function moveCarousel(index) {
+            const carousel = document.getElementById('carousel');
+            const dots = document.querySelectorAll('.dot');
+            
+            currentSlide = index;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        // Auto-rotate carousel
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 3;
+            moveCarousel(currentSlide);
+        }, 5000);
+
+        // Detail sections
+        function showDetail(section) {
+            document.querySelector('.services-section').style.display = 'none';
+            document.querySelector('.who-we-are').style.display = 'none';
+            
+            document.querySelectorAll('.detail-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            const sections = ['launch', 'acquire', 'grow'];
+            document.getElementById(sections[section - 1]).classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function hideAllDetails() {
+            document.querySelector('.services-section').style.display = 'block';
+            document.querySelector('.who-we-are').style.display = 'block';
+            
+            document.querySelectorAll('.detail-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            document.querySelector('.services-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // FAQ functionality
+        function toggleFAQ(element) {
+            const wasActive = element.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            if (!wasActive) {
+                element.classList.add('active');
             }
+        }
 
-            // Move slides
-            const slidesContainer = document.querySelector('.carousel-slides');
-            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // In production, this would send to a backend
+            console.log('Form submitted:', data);
+            
+            alert(currentLanguage === 'en' 
+                ? 'Thank you for your submission! We\'ll be in touch soon.' 
+                : '¡Gracias por tu envío! Nos pondremos en contacto pronto.');
+            
+            event.target.reset();
+        }
 
-            // Update indicators
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === currentSlide);
+        // Language switcher
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update button states
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+            
+            // Update HTML lang attribute
+            document.getElementById('html-root').setAttribute('lang', lang);
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                const translation = element.getAttribute(`data-${lang}`);
+                if (translation) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translation;
+                    } else if (element.tagName === 'OPTION') {
+                        element.textContent = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
             });
+
+            // Update page title
+            const title = document.querySelector('title');
+            title.textContent = title.getAttribute(`data-${lang}`);
         }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        // Auto-rotate every 5 seconds
-        function startAutoRotate() {
-            autoRotateInterval = setInterval(nextSlide, 5000);
-        }
-
-        function stopAutoRotate() {
-            clearInterval(autoRotateInterval);
-        }
-
-        // Navigation button event listeners
-        document.querySelector('.carousel-btn.next').addEventListener('click', () => {
-            nextSlide();
-            stopAutoRotate();
-            startAutoRotate(); // Restart auto-rotate after manual interaction
-        });
-
-        document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
-            prevSlide();
-            stopAutoRotate();
-            startAutoRotate();
-        });
-
-        // Indicator click events
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                showSlide(index);
-                stopAutoRotate();
-                startAutoRotate();
-            });
-        });
-
-        // Pause auto-rotate on hover
-        const carouselContainer = document.querySelector('.carousel-container');
-        carouselContainer.addEventListener('mouseenter', stopAutoRotate);
-        carouselContainer.addEventListener('mouseleave', startAutoRotate);
-
-        // Start auto-rotate on page load
-        startAutoRotate();
-
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            // Form will submit to Formspree
-            // Show a brief confirmation message
-            const submitBtn = this.querySelector('.submit-btn');
-            submitBtn.textContent = 'Submitting...';
-            submitBtn.disabled = true;
-        });
     </script>
 </body>
 </html>
