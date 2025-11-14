@@ -24,7 +24,7 @@
             padding: 0 20px;
         }
 
-        /* Header - FIXED: Reduced padding from 40px to 20px */
+        /* Header */
         header {
             background-color: #FFF;
             padding: 20px 0;
@@ -42,14 +42,24 @@
 
         .logo {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
         }
-
-        /* FIXED: Logo height reduced from 120px to 60px */
-        .logo img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
+        
+        .logo-text {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: 2px;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+        
+        .logo-tagline {
+            font-size: 11px;
+            color: #808080;
+            letter-spacing: 1px;
+            font-weight: 400;
         }
 
         nav {
@@ -143,29 +153,15 @@
         }
 
         .founder-grid {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .founder-image {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .founder-bio h3 {
             font-size: 28px;
             color: #2C3E50;
-            margin-bottom: 10px;
-        }
-
-        .founder-bio .title {
-            font-size: 18px;
-            color: #666;
             margin-bottom: 20px;
-            font-style: italic;
+            text-align: center;
         }
 
         .founder-bio p {
@@ -230,31 +226,24 @@
 
         .service-card {
             min-width: 100%;
-            padding: 40px;
+            padding: 50px 60px;
             background-color: #FFF;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            text-align: center;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* FIXED: Service icons reduced from 120px to 100px with object-fit */
-        .service-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 25px;
-            display: block;
-            object-fit: contain;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
         }
 
         .service-card h3 {
-            font-size: 28px;
+            font-size: 32px;
             color: #2C3E50;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: center;
         }
 
@@ -361,14 +350,6 @@
             line-height: 1.6;
         }
 
-        .template-preview {
-            background-color: #F5F1E8;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 30px 0;
-        }
-
         .cta-section {
             background-color: #F5F1E8;
             padding: 40px;
@@ -421,7 +402,7 @@
             color: #FFF;
         }
 
-        /* Questionnaire Section - FIXED: Gradient background to match Hero */
+        /* Questionnaire Section */
         .questionnaire-section {
             padding: 80px 0;
             background: linear-gradient(135deg, #F5F1E8 0%, #FFF 100%);
@@ -442,7 +423,6 @@
             margin: 0 auto 50px;
         }
 
-        /* FIXED: White background with shadow instead of beige */
         .questionnaire-form {
             max-width: 700px;
             margin: 0 auto;
@@ -595,16 +575,6 @@
                 font-size: 18px;
             }
 
-            .founder-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .founder-image {
-                max-width: 300px;
-                margin: 0 auto;
-            }
-
             .service-card h3 {
                 font-size: 24px;
             }
@@ -635,7 +605,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="03_V3TTA_Website_Header.png" alt="V3TTA Logo">
+                    <div class="logo-text">V3TTA</div>
+                    <div class="logo-tagline">build | launch | grow</div>
                 </div>
                 <nav>
                     <a href="#services" data-en="Services" data-es="Servicios">Services</a>
@@ -674,31 +645,29 @@
         <div class="container">
             <h2 data-en="Who We Are" data-es="Quiénes Somos">Who We Are</h2>
             <div class="founder-grid">
-                <img src="Jose6.png" alt="Jose Algara" class="founder-image">
                 <div class="founder-bio">
-                    <h3 data-en="Jose Algara" data-es="José Algara">Jose Algara</h3>
-                    <p class="title" data-en="Founder & Managing Partner" data-es="Fundador y Socio Director">Founder & Managing Partner</p>
+                    <h3 data-en="Our Team" data-es="Nuestro Equipo">Our Team</h3>
                     
-                    <p data-en="With over 20 years of experience building and scaling startups and Fortune 500 companies, Jose brings a unique combination of entrepreneurial insight and enterprise-level expertise to V3TTA. His background spans operations, supply chain, logistics, and inventory management across some of the world's most recognized brands." data-es="Con más de 20 años de experiencia construyendo y escalando startups y empresas Fortune 500, José aporta una combinación única de perspectiva empresarial y experiencia a nivel corporativo a V3TTA. Su experiencia abarca operaciones, cadena de suministro, logística y gestión de inventario en algunas de las marcas más reconocidas del mundo.">
-                        With over 20 years of experience building and scaling startups and Fortune 500 companies, Jose brings a unique combination of entrepreneurial insight and enterprise-level expertise to V3TTA. His background spans operations, supply chain, logistics, and inventory management across some of the world's most recognized brands.
+                    <p data-en="With over 20 years of combined experience building and scaling startups and Fortune 500 companies, our team brings a unique combination of entrepreneurial insight and enterprise-level expertise to V3TTA. Our background spans operations, supply chain, logistics, and inventory management across some of the world's most recognized brands." data-es="Con más de 20 años de experiencia combinada construyendo y escalando startups y empresas Fortune 500, nuestro equipo aporta una combinación única de perspectiva empresarial y experiencia a nivel corporativo a V3TTA. Nuestra experiencia abarca operaciones, cadena de suministro, logística y gestión de inventario en algunas de las marcas más reconocidas del mundo.">
+                        With over 20 years of combined experience building and scaling startups and Fortune 500 companies, our team brings a unique combination of entrepreneurial insight and enterprise-level expertise to V3TTA. Our background spans operations, supply chain, logistics, and inventory management across some of the world's most recognized brands.
                     </p>
                     
-                    <p data-en="Jose has led transformational initiatives at Nordstrom, Maersk, and Flexport, delivering multi-million dollar savings while improving service levels. His hands-on approach has resulted in achievements like 28% inventory cost reduction and near-doubling of on-time delivery rates." data-es="José ha liderado iniciativas transformacionales en Nordstrom, Maersk y Flexport, generando ahorros multimillonarios mientras mejoraba los niveles de servicio. Su enfoque práctico ha resultado en logros como reducción del 28% en costos de inventario y casi duplicar las tasas de entrega a tiempo.">
-                        Jose has led transformational initiatives at Nordstrom, Maersk, and Flexport, delivering multi-million dollar savings while improving service levels. His hands-on approach has resulted in achievements like 28% inventory cost reduction and near-doubling of on-time delivery rates.
+                    <p data-en="We have led transformational initiatives at companies like Nordstrom, Maersk, and Flexport, delivering multi-million dollar savings while improving service levels. Our hands-on approach has resulted in achievements like 28% inventory cost reduction and near-doubling of on-time delivery rates." data-es="Hemos liderado iniciativas transformacionales en empresas como Nordstrom, Maersk y Flexport, generando ahorros multimillonarios mientras mejorábamos los niveles de servicio. Nuestro enfoque práctico ha resultado en logros como reducción del 28% en costos de inventario y casi duplicar las tasas de entrega a tiempo.">
+                        We have led transformational initiatives at companies like Nordstrom, Maersk, and Flexport, delivering multi-million dollar savings while improving service levels. Our hands-on approach has resulted in achievements like 28% inventory cost reduction and near-doubling of on-time delivery rates.
                     </p>
 
                     <div class="highlights">
                         <h4 data-en="Experience Highlights:" data-es="Aspectos Destacados de Experiencia:">Experience Highlights:</h4>
                         <ul>
-                            <li data-en="Led operations at Amazon, building teams from 1 to 300+ people" data-es="Lideró operaciones en Amazon, construyendo equipos de 1 a más de 300 personas">Led operations at Amazon, building teams from 1 to 300+ people</li>
-                            <li data-en="Built and scaled ride-hailing platform across 30+ cities in Latin America" data-es="Construyó y escaló plataforma de transporte en más de 30 ciudades en Latinoamérica">Built and scaled ride-hailing platform across 30+ cities in Latin America</li>
-                            <li data-en="Managed multi-billion dollar P&L at global logistics companies" data-es="Gestionó P&L multimillonario en empresas de logística global">Managed multi-billion dollar P&L at global logistics companies</li>
-                            <li data-en="Specialized in AI-powered optimization and automation" data-es="Especializado en optimización y automatización impulsada por IA">Specialized in AI-powered optimization and automation</li>
+                            <li data-en="Led operations at Amazon, building teams from 1 to 300+ people" data-es="Lideramos operaciones en Amazon, construyendo equipos de 1 a más de 300 personas">Led operations at Amazon, building teams from 1 to 300+ people</li>
+                            <li data-en="Our team has launched and sold two multimillion dollar companies in 7 countries in LatAm" data-es="Nuestro equipo ha lanzado y vendido dos empresas multimillonarias en 7 países de Latinoamérica">Our team has launched and sold two multimillion dollar companies in 7 countries in LatAm</li>
+                            <li data-en="Managed multi-billion dollar P&L at global logistics companies" data-es="Gestionamos P&L multimillonario en empresas de logística global">Managed multi-billion dollar P&L at global logistics companies</li>
+                            <li data-en="Specialized in AI-powered optimization and automation" data-es="Especializados en optimización y automatización impulsada por IA">Specialized in AI-powered optimization and automation</li>
                         </ul>
                     </div>
 
-                    <p data-en="At V3TTA, Jose applies this Fortune 500 rigor with startup agility to help entrepreneurs launch, acquire, and scale businesses with confidence." data-es="En V3TTA, José aplica este rigor de Fortune 500 con la agilidad de startup para ayudar a emprendedores a lanzar, adquirir y escalar negocios con confianza.">
-                        At V3TTA, Jose applies this Fortune 500 rigor with startup agility to help entrepreneurs launch, acquire, and scale businesses with confidence.
+                    <p data-en="At V3TTA, we apply this Fortune 500 rigor with startup agility to help entrepreneurs launch, acquire, and scale businesses with confidence." data-es="En V3TTA, aplicamos este rigor de Fortune 500 con la agilidad de startup para ayudar a emprendedores a lanzar, adquirir y escalar negocios con confianza.">
+                        At V3TTA, we apply this Fortune 500 rigor with startup agility to help entrepreneurs launch, acquire, and scale businesses with confidence.
                     </p>
                 </div>
             </div>
@@ -713,7 +682,6 @@
                 <div class="carousel" id="carousel">
                     <!-- Service 1: Launch -->
                     <div class="service-card" onclick="showDetail(1)">
-                        <img src="1762888648806_image.png" alt="Launch Icon" class="service-icon">
                         <h3 data-en="Launch Your Business" data-es="Lanza Tu Negocio">Launch Your Business</h3>
                         <p data-en="Turn your idea into a viable business. We help you validate your concept, develop a go-to-market strategy, and build the foundation for sustainable growth." data-es="Convierte tu idea en un negocio viable. Te ayudamos a validar tu concepto, desarrollar una estrategia de salida al mercado y construir la base para un crecimiento sostenible.">
                             Turn your idea into a viable business. We help you validate your concept, develop a go-to-market strategy, and build the foundation for sustainable growth.
@@ -723,7 +691,6 @@
 
                     <!-- Service 2: Acquire -->
                     <div class="service-card" onclick="showDetail(2)">
-                        <img src="1762888643727_image.png" alt="Acquire Icon" class="service-icon">
                         <h3 data-en="Acquire a Business" data-es="Adquiere un Negocio">Acquire a Business</h3>
                         <p data-en="Skip the startup phase and buy an existing business. We guide you through due diligence, valuation, and negotiation to ensure you make a smart acquisition." data-es="Salta la fase de startup y compra un negocio existente. Te guiamos a través de due diligence, valuación y negociación para asegurar una adquisición inteligente.">
                             Skip the startup phase and buy an existing business. We guide you through due diligence, valuation, and negotiation to ensure you make a smart acquisition.
@@ -733,7 +700,6 @@
 
                     <!-- Service 3: Grow -->
                     <div class="service-card" onclick="showDetail(3)">
-                        <img src="1762888653494_image.png" alt="Grow Icon" class="service-icon">
                         <h3 data-en="Grow Your Business" data-es="Crece Tu Negocio">Grow Your Business</h3>
                         <p data-en="Scale your operations and increase profitability. We identify growth opportunities, optimize processes, and provide strategic guidance to take your business to the next level." data-es="Escala tus operaciones y aumenta la rentabilidad. Identificamos oportunidades de crecimiento, optimizamos procesos y brindamos guía estratégica para llevar tu negocio al siguiente nivel.">
                             Scale your operations and increase profitability. We identify growth opportunities, optimize processes, and provide strategic guidance to take your business to the next level.
@@ -764,25 +730,20 @@
 
                 <h3 data-en="What We Cover" data-es="Lo Que Cubrimos">What We Cover</h3>
                 <ul>
-                    <li data-en="Business Model Validation: Testing your assumptions and validating market demand" data-es="Validación del Modelo de Negocio: Probando tus supuestos y validando la demanda del mercado"><strong>Business Model Validation:</strong> Testing your assumptions and validating market demand</li>
-                    <li data-en="Competitive Analysis: Understanding your market landscape and positioning" data-es="Análisis Competitivo: Entendiendo tu panorama de mercado y posicionamiento"><strong>Competitive Analysis:</strong> Understanding your market landscape and positioning</li>
-                    <li data-en="Financial Modeling: Creating realistic projections and budgets" data-es="Modelado Financiero: Creando proyecciones y presupuestos realistas"><strong>Financial Modeling:</strong> Creating realistic projections and budgets</li>
-                    <li data-en="Go-to-Market Strategy: Developing your launch plan and marketing approach" data-es="Estrategia de Salida al Mercado: Desarrollando tu plan de lanzamiento y enfoque de marketing"><strong>Go-to-Market Strategy:</strong> Developing your launch plan and marketing approach</li>
-                    <li data-en="Operations Setup: Establishing systems, processes, and infrastructure" data-es="Configuración de Operaciones: Estableciendo sistemas, procesos e infraestructura"><strong>Operations Setup:</strong> Establishing systems, processes, and infrastructure</li>
-                    <li data-en="Funding Strategy: Guidance on bootstrapping, loans, or investor fundraising" data-es="Estrategia de Financiamiento: Guía sobre bootstrapping, préstamos o recaudación de inversores"><strong>Funding Strategy:</strong> Guidance on bootstrapping, loans, or investor fundraising</li>
+                    <li><strong>Business Model Validation:</strong> Testing your assumptions and validating market demand</li>
+                    <li><strong>Competitive Analysis:</strong> Understanding your market landscape and positioning</li>
+                    <li><strong>Financial Modeling:</strong> Creating realistic projections and budgets</li>
+                    <li><strong>Go-to-Market Strategy:</strong> Developing your launch plan and marketing approach</li>
+                    <li><strong>Operations Setup:</strong> Establishing systems, processes, and infrastructure</li>
+                    <li><strong>Funding Strategy:</strong> Guidance on bootstrapping, loans, or investor fundraising</li>
                 </ul>
-
-                <h3 data-en="The Result" data-es="El Resultado">The Result</h3>
-                <p data-en="You'll walk away with a comprehensive business plan, financial models, and a clear 90-day action plan. More importantly, you'll have the confidence and clarity to execute on your vision." data-es="Te irás con un plan de negocios integral, modelos financieros y un plan de acción claro de 90 días. Más importante aún, tendrás la confianza y claridad para ejecutar tu visión.">
-                    You'll walk away with a comprehensive business plan, financial models, and a clear 90-day action plan. More importantly, you'll have the confidence and clarity to execute on your vision.
-                </p>
 
                 <div class="cta-section">
                     <h3 data-en="Ready to Launch?" data-es="¿Listo Para Lanzar?">Ready to Launch?</h3>
                     <p data-en="Let's turn your idea into a business plan" data-es="Convirtamos tu idea en un plan de negocios">Let's turn your idea into a business plan</p>
                     <div class="cta-buttons">
-                        <a href="mailto:info@v3tta.com" class="btn btn-primary" data-en="Send Us an Email" data-es="Envíanos un Email">Send Us an Email</a>
-                        <a href="#questionnaire" class="btn btn-secondary" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                        <a href="mailto:info@v3tta.com" class="btn btn-primary">Send Us an Email</a>
+                        <a href="#questionnaire" class="btn btn-secondary">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -793,34 +754,27 @@
     <section class="detail-section" id="acquire">
         <div class="container">
             <div class="detail-content">
-                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;" data-en="← Back to Services" data-es="← Volver a Servicios">← Back to Services</a>
+                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;">← Back to Services</a>
                 
-                <h2 data-en="Acquire a Business with Confidence" data-es="Adquiere un Negocio con Confianza">Acquire a Business with Confidence</h2>
+                <h2>Acquire a Business with Confidence</h2>
                 
-                <p data-en="Buying an existing business can be faster and less risky than starting from scratch—if you know what to look for. Our acquisition advisory service helps you find, evaluate, and successfully acquire businesses that align with your goals." data-es="Comprar un negocio existente puede ser más rápido y menos arriesgado que comenzar desde cero, si sabes qué buscar. Nuestro servicio de asesoría de adquisición te ayuda a encontrar, evaluar y adquirir con éxito negocios que se alineen con tus objetivos.">
-                    Buying an existing business can be faster and less risky than starting from scratch—if you know what to look for. Our acquisition advisory service helps you find, evaluate, and successfully acquire businesses that align with your goals.
-                </p>
+                <p>Buying an existing business can be faster and less risky than starting from scratch—if you know what to look for. Our acquisition advisory service helps you find, evaluate, and successfully acquire businesses that align with your goals.</p>
 
-                <h3 data-en="What We Analyze" data-es="Lo Que Analizamos">What We Analyze</h3>
+                <h3>What We Analyze</h3>
                 <ul>
-                    <li data-en="Financial Performance: In-depth P&L analysis, cash flow review, and financial health assessment" data-es="Desempeño Financiero: Análisis profundo de P&L, revisión de flujo de caja y evaluación de salud financiera"><strong>Financial Performance:</strong> In-depth P&L analysis, cash flow review, and financial health assessment</li>
-                    <li data-en="Business Valuation: Fair market value determination and offer price recommendations" data-es="Valuación de Negocio: Determinación de valor justo de mercado y recomendaciones de precio de oferta"><strong>Business Valuation:</strong> Fair market value determination and offer price recommendations</li>
-                    <li data-en="Risk Assessment: Identification of potential red flags, liabilities, and operational risks" data-es="Evaluación de Riesgo: Identificación de posibles señales de alerta, responsabilidades y riesgos operativos"><strong>Risk Assessment:</strong> Identification of potential red flags, liabilities, and operational risks</li>
-                    <li data-en="Growth Potential: Analysis of expansion opportunities and untapped revenue streams" data-es="Potencial de Crecimiento: Análisis de oportunidades de expansión y flujos de ingresos sin explotar"><strong>Growth Potential:</strong> Analysis of expansion opportunities and untapped revenue streams</li>
-                    <li data-en="Financing Strategy: Guidance on SBA loans, seller financing, and private lending options" data-es="Estrategia de Financiamiento: Guía sobre préstamos SBA, financiamiento del vendedor y opciones de préstamos privados"><strong>Financing Strategy:</strong> Guidance on SBA loans, seller financing, and private lending options</li>
+                    <li><strong>Financial Performance:</strong> In-depth P&L analysis, cash flow review, and financial health assessment</li>
+                    <li><strong>Business Valuation:</strong> Fair market value determination and offer price recommendations</li>
+                    <li><strong>Risk Assessment:</strong> Identification of potential red flags, liabilities, and operational risks</li>
+                    <li><strong>Growth Potential:</strong> Analysis of expansion opportunities and untapped revenue streams</li>
+                    <li><strong>Financing Strategy:</strong> Guidance on SBA loans, seller financing, and private lending options</li>
                 </ul>
 
-                <h3 data-en="Why This Matters" data-es="Por Qué Esto Importa">Why This Matters</h3>
-                <p data-en="A thorough analysis can save you from costly mistakes and help you negotiate better terms. We provide objective, data-driven insights so you can acquire with confidence." data-es="Un análisis exhaustivo puede ahorrarte errores costosos y ayudarte a negociar mejores términos. Proporcionamos perspectivas objetivas basadas en datos para que puedas adquirir con confianza.">
-                    A thorough analysis can save you from costly mistakes and help you negotiate better terms. We provide objective, data-driven insights so you can acquire with confidence.
-                </p>
-
                 <div class="cta-section">
-                    <h3 data-en="Found a Business to Acquire?" data-es="¿Encontraste un Negocio Para Adquirir?">Found a Business to Acquire?</h3>
-                    <p data-en="Let's analyze the opportunity together and ensure it's the right move" data-es="Analicemos la oportunidad juntos y aseguremos que es la decisión correcta">Let's analyze the opportunity together and ensure it's the right move</p>
+                    <h3>Found a Business to Acquire?</h3>
+                    <p>Let's analyze the opportunity together and ensure it's the right move</p>
                     <div class="cta-buttons">
-                        <a href="mailto:info@v3tta.com" class="btn btn-primary" data-en="Send Us an Email" data-es="Envíanos un Email">Send Us an Email</a>
-                        <a href="#questionnaire" class="btn btn-secondary" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                        <a href="mailto:info@v3tta.com" class="btn btn-primary">Send Us an Email</a>
+                        <a href="#questionnaire" class="btn btn-secondary">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -831,35 +785,28 @@
     <section class="detail-section" id="grow">
         <div class="container">
             <div class="detail-content">
-                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;" data-en="← Back to Services" data-es="← Volver a Servicios">← Back to Services</a>
+                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;">← Back to Services</a>
                 
-                <h2 data-en="Grow Your Business to New Heights" data-es="Crece Tu Negocio a Nuevas Alturas">Grow Your Business to New Heights</h2>
+                <h2>Grow Your Business to New Heights</h2>
                 
-                <p data-en="Running a business is challenging, and knowing where to focus your efforts can be difficult. We provide fresh perspective and actionable strategies to accelerate your growth." data-es="Administrar un negocio es desafiante, y saber dónde enfocar tus esfuerzos puede ser difícil. Proporcionamos perspectiva fresca y estrategias accionables para acelerar tu crecimiento.">
-                    Running a business is challenging, and knowing where to focus your efforts can be difficult. We provide fresh perspective and actionable strategies to accelerate your growth.
-                </p>
+                <p>Running a business is challenging, and knowing where to focus your efforts can be difficult. We provide fresh perspective and actionable strategies to accelerate your growth.</p>
 
-                <h3 data-en="What We Assess" data-es="Lo Que Evaluamos">What We Assess</h3>
+                <h3>What We Assess</h3>
                 <ul>
-                    <li data-en="Current State Analysis: Comprehensive review of operations, financials, and market position" data-es="Análisis del Estado Actual: Revisión integral de operaciones, finanzas y posición de mercado"><strong>Current State Analysis:</strong> Comprehensive review of operations, financials, and market position</li>
-                    <li data-en="Revenue Growth Opportunities: Identification of new revenue streams and sales optimization strategies" data-es="Oportunidades de Crecimiento de Ingresos: Identificación de nuevos flujos de ingresos y estrategias de optimización de ventas"><strong>Revenue Growth Opportunities:</strong> Identification of new revenue streams and sales optimization strategies</li>
-                    <li data-en="Cost Reduction: Analysis of operating expenses and recommendations for efficiency improvements" data-es="Reducción de Costos: Análisis de gastos operativos y recomendaciones para mejoras de eficiencia"><strong>Cost Reduction:</strong> Analysis of operating expenses and recommendations for efficiency improvements</li>
-                    <li data-en="Debt Management: Strategies to reduce and restructure business debt" data-es="Gestión de Deuda: Estrategias para reducir y reestructurar deuda empresarial"><strong>Debt Management:</strong> Strategies to reduce and restructure business debt</li>
-                    <li data-en="Operational Excellence: Process improvements and systems to scale effectively" data-es="Excelencia Operacional: Mejoras de procesos y sistemas para escalar efectivamente"><strong>Operational Excellence:</strong> Process improvements and systems to scale effectively</li>
-                    <li data-en="Strategic Planning: 12-month roadmap with clear milestones and KPIs" data-es="Planificación Estratégica: Hoja de ruta de 12 meses con hitos claros y KPIs"><strong>Strategic Planning:</strong> 12-month roadmap with clear milestones and KPIs</li>
+                    <li><strong>Current State Analysis:</strong> Comprehensive review of operations, financials, and market position</li>
+                    <li><strong>Revenue Growth Opportunities:</strong> Identification of new revenue streams and sales optimization strategies</li>
+                    <li><strong>Cost Reduction:</strong> Analysis of operating expenses and recommendations for efficiency improvements</li>
+                    <li><strong>Debt Management:</strong> Strategies to reduce and restructure business debt</li>
+                    <li><strong>Operational Excellence:</strong> Process improvements and systems to scale effectively</li>
+                    <li><strong>Strategic Planning:</strong> 12-month roadmap with clear milestones and KPIs</li>
                 </ul>
 
-                <h3 data-en="The Outcome" data-es="El Resultado">The Outcome</h3>
-                <p data-en="You'll receive a detailed action plan with prioritized initiatives, financial projections, and ongoing support to ensure successful implementation. We help you work ON your business, not just IN it." data-es="Recibirás un plan de acción detallado con iniciativas priorizadas, proyecciones financieras y soporte continuo para asegurar una implementación exitosa. Te ayudamos a trabajar EN tu negocio, no solo DENTRO de él.">
-                    You'll receive a detailed action plan with prioritized initiatives, financial projections, and ongoing support to ensure successful implementation. We help you work ON your business, not just IN it.
-                </p>
-
                 <div class="cta-section">
-                    <h3 data-en="Ready to Scale?" data-es="¿Listo Para Escalar?">Ready to Scale?</h3>
-                    <p data-en="Let's unlock your business's full potential together" data-es="Desbloqueemos el potencial completo de tu negocio juntos">Let's unlock your business's full potential together</p>
+                    <h3>Ready to Scale?</h3>
+                    <p>Let's unlock your business's full potential together</p>
                     <div class="cta-buttons">
-                        <a href="mailto:info@v3tta.com" class="btn btn-primary" data-en="Send Us an Email" data-es="Envíanos un Email">Send Us an Email</a>
-                        <a href="#questionnaire" class="btn btn-secondary" data-en="Get Started" data-es="Comenzar">Get Started</a>
+                        <a href="mailto:info@v3tta.com" class="btn btn-primary">Send Us an Email</a>
+                        <a href="#questionnaire" class="btn btn-secondary">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -869,55 +816,43 @@
     <!-- Questionnaire Section -->
     <section class="questionnaire-section" id="questionnaire">
         <div class="container">
-            <h2 data-en="Let's Start Your Journey" data-es="Comencemos Tu Camino">Let's Start Your Journey</h2>
-            <p class="questionnaire-intro" data-en="Answer a few quick questions so we can better understand your needs and provide tailored guidance." data-es="Responde algunas preguntas rápidas para que podamos entender mejor tus necesidades y proporcionar orientación personalizada.">
-                Answer a few quick questions so we can better understand your needs and provide tailored guidance.
-            </p>
+            <h2>Let's Start Your Journey</h2>
+            <p class="questionnaire-intro">Answer a few quick questions so we can better understand your needs and provide tailored guidance.</p>
             
             <form class="questionnaire-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
-                    <label data-en="Name" data-es="Nombre">
-                        Name <span class="required">*</span>
-                    </label>
+                    <label>Name <span class="required">*</span></label>
                     <input type="text" name="name" required placeholder="Your name">
                 </div>
 
                 <div class="form-group">
-                    <label data-en="Email" data-es="Correo Electrónico">
-                        Email <span class="required">*</span>
-                    </label>
+                    <label>Email <span class="required">*</span></label>
                     <input type="email" name="email" required placeholder="your@email.com">
                 </div>
 
                 <div class="form-group">
-                    <label data-en="Phone Number" data-es="Número de Teléfono">
-                        Phone Number <span class="required">*</span>
-                    </label>
+                    <label>Phone Number <span class="required">*</span></label>
                     <input type="tel" name="phone" required placeholder="(555) 123-4567">
                 </div>
 
                 <div class="form-group">
-                    <label data-en="What is your estimated timeline for completing an acquisition?" data-es="¿Cuál es tu cronograma estimado para completar una adquisición?">
-                        What is your estimated timeline for completing an acquisition? <span class="required">*</span>
-                    </label>
+                    <label>What is your estimated timeline for completing an acquisition? <span class="required">*</span></label>
                     <select name="timeline" required>
-                        <option value="" data-en="Select a timeline..." data-es="Selecciona un cronograma...">Select a timeline...</option>
-                        <option value="0-3" data-en="0-3 months" data-es="0-3 meses">0-3 months</option>
-                        <option value="3-6" data-en="3-6 months" data-es="3-6 meses">3-6 months</option>
-                        <option value="6-12" data-en="6-12 months" data-es="6-12 meses">6-12 months</option>
-                        <option value="12+" data-en="12+ months" data-es="12+ meses">12+ months</option>
-                        <option value="exploring" data-en="Just exploring" data-es="Solo explorando">Just exploring</option>
+                        <option value="">Select a timeline...</option>
+                        <option value="0-3">0-3 months</option>
+                        <option value="3-6">3-6 months</option>
+                        <option value="6-12">6-12 months</option>
+                        <option value="12+">12+ months</option>
+                        <option value="exploring">Just exploring</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label data-en="Additional Information (Optional)" data-es="Información Adicional (Opcional)">
-                        Additional Information (Optional)
-                    </label>
+                    <label>Additional Information (Optional)</label>
                     <textarea name="additional" placeholder="Tell us more about your goals, challenges, or questions..."></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn" data-en="Submit" data-es="Enviar">Submit</button>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
     </section>
@@ -925,60 +860,31 @@
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <div class="container">
-            <h2 data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+            <h2>Frequently Asked Questions</h2>
             
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="What types of businesses do you work with?" data-es="¿Con qué tipos de negocios trabajan?">
-                    What types of businesses do you work with?
-                </div>
-                <div class="faq-answer" data-en="We work with small to medium-sized businesses across various industries. Whether you're in retail, services, technology, or manufacturing, our frameworks and methodologies can be adapted to your specific needs. We've helped clients in e-commerce, professional services, franchises, and more." data-es="Trabajamos con pequeñas y medianas empresas en varias industrias. Ya sea que estés en retail, servicios, tecnología o manufactura, nuestros marcos y metodologías pueden adaptarse a tus necesidades específicas. Hemos ayudado a clientes en e-commerce, servicios profesionales, franquicias y más.">
-                    We work with small to medium-sized businesses across various industries. Whether you're in retail, services, technology, or manufacturing, our frameworks and methodologies can be adapted to your specific needs. We've helped clients in e-commerce, professional services, franchises, and more.
-                </div>
+                <div class="faq-question">What types of businesses do you work with?</div>
+                <div class="faq-answer">We work with small to medium-sized businesses across various industries. Whether you're in retail, services, technology, or manufacturing, our frameworks and methodologies can be adapted to your specific needs.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="How long does a typical engagement last?" data-es="¿Cuánto dura un compromiso típico?">
-                    How long does a typical engagement last?
-                </div>
-                <div class="faq-answer" data-en="Engagement length varies based on the service and your needs. A business launch consultation typically takes 4-8 weeks, acquisition analysis 2-4 weeks, and growth strategy development 6-12 weeks. We can also provide ongoing advisory support for implementation." data-es="La duración del compromiso varía según el servicio y tus necesidades. Una consulta de lanzamiento de negocio típicamente toma 4-8 semanas, análisis de adquisición 2-4 semanas, y desarrollo de estrategia de crecimiento 6-12 semanas. También podemos proporcionar soporte de asesoría continua para la implementación.">
-                    Engagement length varies based on the service and your needs. A business launch consultation typically takes 4-8 weeks, acquisition analysis 2-4 weeks, and growth strategy development 6-12 weeks. We can also provide ongoing advisory support for implementation.
-                </div>
+                <div class="faq-question">How long does a typical engagement last?</div>
+                <div class="faq-answer">Engagement length varies based on the service and your needs. A business launch consultation typically takes 4-8 weeks, acquisition analysis 2-4 weeks, and growth strategy development 6-12 weeks.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="What's included in your pricing?" data-es="¿Qué incluye su precio?">
-                    What's included in your pricing?
-                </div>
-                <div class="faq-answer" data-en="Our pricing is customized based on the scope of work. Typical packages include all analysis, templates, financial models, strategy documents, and a specified number of consultation hours. We'll provide a detailed proposal after our initial discovery call." data-es="Nuestro precio se personaliza según el alcance del trabajo. Los paquetes típicos incluyen todo el análisis, plantillas, modelos financieros, documentos de estrategia y un número específico de horas de consulta. Proporcionaremos una propuesta detallada después de nuestra llamada inicial de descubrimiento.">
-                    Our pricing is customized based on the scope of work. Typical packages include all analysis, templates, financial models, strategy documents, and a specified number of consultation hours. We'll provide a detailed proposal after our initial discovery call.
-                </div>
+                <div class="faq-question">What's included in your pricing?</div>
+                <div class="faq-answer">Our pricing is customized based on the scope of work. Typical packages include all analysis, templates, financial models, strategy documents, and a specified number of consultation hours.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="Do you provide ongoing support after the initial engagement?" data-es="¿Proporcionan soporte continuo después del compromiso inicial?">
-                    Do you provide ongoing support after the initial engagement?
-                </div>
-                <div class="faq-answer" data-en="Yes! We offer several ongoing support options including monthly advisory retainers, implementation support packages, and ad-hoc consulting. Many clients find value in having us as a strategic partner as they execute their plans." data-es="¡Sí! Ofrecemos varias opciones de soporte continuo incluyendo retenes de asesoría mensual, paquetes de soporte de implementación y consultoría ad-hoc. Muchos clientes encuentran valor en tenernos como socio estratégico mientras ejecutan sus planes.">
-                    Yes! We offer several ongoing support options including monthly advisory retainers, implementation support packages, and ad-hoc consulting. Many clients find value in having us as a strategic partner as they execute their plans.
-                </div>
+                <div class="faq-question">Do you provide ongoing support?</div>
+                <div class="faq-answer">Yes! We offer several ongoing support options including monthly advisory retainers, implementation support packages, and ad-hoc consulting.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="What makes your approach different?" data-es="¿Qué hace diferente su enfoque?">
-                    What makes your approach different?
-                </div>
-                <div class="faq-answer" data-en="We combine Fortune 500 rigor with startup agility. You get enterprise-grade analysis and frameworks at accessible pricing. We focus on practical, actionable recommendations rather than lengthy reports that sit on shelves. Our founders have walked the path you're on and bring real-world experience to every engagement." data-es="Combinamos el rigor de Fortune 500 con la agilidad de startup. Obtienes análisis y marcos de nivel empresarial a precios accesibles. Nos enfocamos en recomendaciones prácticas y accionables en lugar de informes largos que se quedan en estantes. Nuestros fundadores han recorrido el camino que estás recorriendo y aportan experiencia del mundo real a cada compromiso.">
-                    We combine Fortune 500 rigor with startup agility. You get enterprise-grade analysis and frameworks at accessible pricing. We focus on practical, actionable recommendations rather than lengthy reports that sit on shelves. Our founders have walked the path you're on and bring real-world experience to every engagement.
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="How do I get started?" data-es="¿Cómo empiezo?">
-                    How do I get started?
-                </div>
-                <div class="faq-answer" data-en="Simply reach out via email or fill out our questionnaire. We'll discuss your situation, answer questions, and determine if we're a good fit. There's no obligation, and you'll leave with valuable insights regardless." data-es="Simplemente contáctanos por correo electrónico o completa nuestro cuestionario. Discutiremos tu situación, responderemos preguntas y determinaremos si somos un buen ajuste. No hay obligación, y te irás con perspectivas valiosas de todos modos.">
-                    Simply reach out via email or fill out our questionnaire. We'll discuss your situation, answer questions, and determine if we're a good fit. There's no obligation, and you'll leave with valuable insights regardless.
-                </div>
+                <div class="faq-question">What makes your approach different?</div>
+                <div class="faq-answer">We combine Fortune 500 rigor with startup agility. You get enterprise-grade analysis and frameworks at accessible pricing. We focus on practical, actionable recommendations.</div>
             </div>
         </div>
     </section>
@@ -986,13 +892,9 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
-            <p>&copy; 2025 V3TTA. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
-            <p style="margin-top: 10px; font-size: 14px;" data-en="Build | Launch | Grow - Empowering entrepreneurs to reach new heights." data-es="Construye | Lanza | Crece - Empoderando emprendedores para alcanzar nuevas alturas.">
-                Build | Launch | Grow - Empowering entrepreneurs to reach new heights.
-            </p>
-            <p style="margin-top: 10px;">
-                <a href="mailto:info@v3tta.com" style="color: #FFF; text-decoration: none;">info@v3tta.com</a>
-            </p>
+            <p>&copy; 2025 V3TTA. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px;">Build | Launch | Grow - Empowering entrepreneurs to reach new heights.</p>
+            <p style="margin-top: 10px;"><a href="mailto:info@v3tta.com" style="color: #FFF; text-decoration: none;">info@v3tta.com</a></p>
         </div>
     </footer>
 
@@ -1000,108 +902,55 @@
         let currentSlide = 0;
         let currentLanguage = 'en';
 
-        // Carousel functionality
         function moveCarousel(index) {
             const carousel = document.getElementById('carousel');
             const dots = document.querySelectorAll('.dot');
-            
             currentSlide = index;
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide);
-            });
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
         }
 
-        // Auto-rotate carousel
         setInterval(() => {
             currentSlide = (currentSlide + 1) % 3;
             moveCarousel(currentSlide);
         }, 5000);
 
-        // Detail sections
         function showDetail(section) {
             document.querySelector('.services-section').style.display = 'none';
             document.querySelector('.who-we-are').style.display = 'none';
-            
-            document.querySelectorAll('.detail-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
+            document.querySelectorAll('.detail-section').forEach(s => s.classList.remove('active'));
             const sections = ['launch', 'acquire', 'grow'];
             document.getElementById(sections[section - 1]).classList.add('active');
-            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function hideAllDetails() {
             document.querySelector('.services-section').style.display = 'block';
             document.querySelector('.who-we-are').style.display = 'block';
-            
-            document.querySelectorAll('.detail-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
+            document.querySelectorAll('.detail-section').forEach(s => s.classList.remove('active'));
             document.querySelector('.services-section').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // FAQ functionality
         function toggleFAQ(element) {
             const wasActive = element.classList.contains('active');
-            
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            if (!wasActive) {
-                element.classList.add('active');
-            }
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+            if (!wasActive) element.classList.add('active');
         }
 
-        // Form submission
         function handleSubmit(event) {
             event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
-            
-            // In production, this would send to a backend
-            console.log('Form submitted:', data);
-            
-            alert(currentLanguage === 'en' 
-                ? 'Thank you for your submission! We\'ll be in touch soon.' 
-                : '¡Gracias por tu envío! Nos pondremos en contacto pronto.');
-            
+            alert('Thank you for your submission! We\'ll be in touch soon.');
             event.target.reset();
         }
 
-        // Language switcher
         function switchLanguage(lang) {
             currentLanguage = lang;
-            
-            // Update button states
             document.getElementById('lang-en').classList.toggle('active', lang === 'en');
             document.getElementById('lang-es').classList.toggle('active', lang === 'es');
-            
-            // Update HTML lang attribute
-            document.getElementById('html-root').setAttribute('lang', lang);
-            
-            // Update all translatable elements
             document.querySelectorAll('[data-en][data-es]').forEach(element => {
                 const translation = element.getAttribute(`data-${lang}`);
-                if (translation) {
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        element.placeholder = translation;
-                    } else if (element.tagName === 'OPTION') {
-                        element.textContent = translation;
-                    } else {
-                        element.textContent = translation;
-                    }
-                }
+                if (translation) element.textContent = translation;
             });
-
-            // Update page title
-            const title = document.querySelector('title');
-            title.textContent = title.getAttribute(`data-${lang}`);
         }
     </script>
 </body>
