@@ -611,6 +611,7 @@
                 <nav>
                     <a href="#services" data-en="Services" data-es="Servicios">Services</a>
                     <a href="#who-we-are" data-en="Who We Are" data-es="Quiénes Somos">Who We Are</a>
+                    <a href="#assessment" data-en="Free Assessment" data-es="Evaluación Gratis">Free Assessment</a>
                     <a href="#questionnaire" data-en="Get Started" data-es="Comenzar">Get Started</a>
                     <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
                     <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
@@ -816,6 +817,91 @@
         </div>
     </section>
 
+    <!-- Assessment Introduction Section -->
+    <section class="questionnaire-section" id="assessment" style="background: linear-gradient(135deg, #F5F1E8 0%, #FFF 100%);">
+        <div class="container">
+            <h2 data-en="Free Sustainable Success Assessment" data-es="Evaluación Gratuita de Éxito Sostenible">Free Sustainable Success Assessment</h2>
+            <p class="questionnaire-intro" data-en="Discover your strengths and opportunities across the five dimensions of sustainable success. Start by telling us a bit about yourself." data-es="Descubre tus fortalezas y oportunidades en las cinco dimensiones del éxito sostenible. Comienza contándonos un poco sobre ti.">Discover your strengths and opportunities across the five dimensions of sustainable success. Start by telling us a bit about yourself.</p>
+            
+            <form class="questionnaire-form" id="assessmentIntroForm" onsubmit="handleAssessmentIntro(event)">
+                <div class="form-group">
+                    <label data-en="Full Name" data-es="Nombre Completo">Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" id="intro-name" required placeholder="Your full name" data-en-placeholder="Your full name" data-es-placeholder="Tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Email Address" data-es="Correo Electrónico">Email Address <span class="required">*</span></label>
+                    <input type="email" name="email" id="intro-email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Phone Number" data-es="Número de Teléfono">Phone Number <span class="required">*</span></label>
+                    <input type="tel" name="phone" id="intro-phone" required placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Age" data-es="Edad">Age <span class="required">*</span></label>
+                    <input type="number" name="age" id="intro-age" required placeholder="35" min="18" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Gender" data-es="Género">Gender <span class="required">*</span></label>
+                    <select name="gender" id="intro-gender" required>
+                        <option value="" data-en="Select..." data-es="Seleccionar...">Select...</option>
+                        <option value="male" data-en="Male" data-es="Masculino">Male</option>
+                        <option value="female" data-en="Female" data-es="Femenino">Female</option>
+                        <option value="non-binary" data-en="Non-binary" data-es="No binario">Non-binary</option>
+                        <option value="prefer-not-to-say" data-en="Prefer not to say" data-es="Prefiero no decir">Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="What are you looking for?" data-es="¿Qué estás buscando?">What are you looking for? <span class="required">*</span></label>
+                    <div style="margin-bottom: 10px;">
+                        <div style="margin-bottom: 8px;">
+                            <input type="radio" name="looking-for" id="career-growth" value="Career growth" required style="margin-right: 8px;">
+                            <label for="career-growth" style="font-weight: normal; display: inline;" data-en="Career growth" data-es="Crecimiento profesional">Career growth</label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <input type="radio" name="looking-for" id="work-life" value="Achieve better work-life balance" style="margin-right: 8px;">
+                            <label for="work-life" style="font-weight: normal; display: inline;" data-en="Achieve better work-life balance" data-es="Lograr mejor equilibrio trabajo-vida">Achieve better work-life balance</label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <input type="radio" name="looking-for" id="relationships" value="Better relationships at work" style="margin-right: 8px;">
+                            <label for="relationships" style="font-weight: normal; display: inline;" data-en="Better relationships at work" data-es="Mejores relaciones en el trabajo">Better relationships at work</label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <input type="radio" name="looking-for" id="presence" value="Be more present both at work and in my personal life" style="margin-right: 8px;">
+                            <label for="presence" style="font-weight: normal; display: inline;" data-en="Be more present both at work and in my personal life" data-es="Estar más presente en el trabajo y en mi vida personal">Be more present both at work and in my personal life</label>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <input type="radio" name="looking-for" id="other" value="Other" style="margin-right: 8px;" onchange="toggleOtherField()">
+                            <label for="other" style="font-weight: normal; display: inline;" data-en="Other" data-es="Otro">Other</label>
+                        </div>
+                    </div>
+                    <div id="other-field" style="display: none; margin-top: 10px;">
+                        <textarea name="looking-for-other" id="intro-other" placeholder="Please describe what you're looking for..." data-en-placeholder="Please describe what you're looking for..." data-es-placeholder="Por favor describe qué estás buscando..." style="width: 100%; padding: 12px; border: 1px solid #DDD; border-radius: 5px; font-size: 16px; font-family: inherit; min-height: 80px;"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" data-en="Start Assessment" data-es="Comenzar Evaluación">Start Assessment</button>
+            </form>
+
+            <div id="thank-you-message" style="display: none; text-align: center; padding: 60px 20px;">
+                <h3 style="font-size: 28px; color: #2C3E50; margin-bottom: 20px;" data-en="Thank You!" data-es="¡Gracias!">Thank You!</h3>
+                <p style="font-size: 18px; color: #555; line-height: 1.8; max-width: 600px; margin: 0 auto 30px;" data-en="Thanks for completing our introductory assessment. We will review your information and send you next steps to receive a personalized action plan." data-es="Gracias por completar nuestra evaluación introductoria. Revisaremos tu información y te enviaremos los próximos pasos para recibir un plan de acción personalizado.">
+                    Thanks for completing our introductory assessment. We will review your information and send you next steps to receive a personalized action plan.
+                </p>
+                <div style="background: #F9F9F9; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto;">
+                    <p style="font-size: 16px; color: #666; margin-bottom: 20px;" data-en="Want to get deeper insights now? Take our comprehensive Sustainable Success Assessment to discover your strengths across all five dimensions." data-es="¿Quieres obtener información más profunda ahora? Realiza nuestra Evaluación Integral de Éxito Sostenible para descubrir tus fortalezas en las cinco dimensiones.">
+                        Want to get deeper insights now? Take our comprehensive Sustainable Success Assessment to discover your strengths across all five dimensions.
+                    </p>
+                    <a href="assessment.html" class="btn btn-primary" style="display: inline-block; text-decoration: none;" data-en="Take Full Assessment" data-es="Realizar Evaluación Completa">Take Full Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Questionnaire Section -->
     <section class="questionnaire-section" id="questionnaire">
         <div class="container">
@@ -968,6 +1054,63 @@
                 const placeholder = element.getAttribute(`data-${lang}-placeholder`);
                 if (placeholder) element.placeholder = placeholder;
             });
+        }
+
+        // Toggle "Other" text field visibility
+        function toggleOtherField() {
+            const otherRadio = document.getElementById('other');
+            const otherField = document.getElementById('other-field');
+            if (otherRadio.checked) {
+                otherField.style.display = 'block';
+            } else {
+                otherField.style.display = 'none';
+            }
+        }
+
+        // Handle assessment intro form submission
+        function handleAssessmentIntro(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const age = formData.get('age');
+            const gender = formData.get('gender');
+            let lookingFor = formData.get('looking-for');
+            
+            // If "Other" was selected, use the text from the textarea
+            if (lookingFor === 'Other') {
+                const otherText = formData.get('looking-for-other');
+                lookingFor = otherText ? `Other: ${otherText}` : 'Other';
+            }
+            
+            // Create email body
+            const emailBody = `New Potential Customer from Website Assessment:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Age: ${age}
+Gender: ${gender}
+Looking for: ${lookingFor}
+
+Submitted: ${new Date().toLocaleString()}`;
+            
+            // Create mailto link
+            const subject = 'Potential Customer';
+            const mailtoLink = `mailto:contact@v3tta.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Hide form and show thank you message
+            document.getElementById('assessmentIntroForm').style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+            
+            // Scroll to thank you message
+            document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
