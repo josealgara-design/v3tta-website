@@ -579,45 +579,17 @@
         
         <div class="header">
             <h2>The Sustainable Success Assessment</h2>
-            <p class="subtitle">A comprehensive evaluation of the five critical dimensions that determine your capacity for long-term entrepreneurial success. Discover where you're strong, where you need support, and how to build a foundation for sustainable growth.</p>
+            <p class="subtitle">A comprehensive evaluation of the five critical dimensions that determine your capacity for long-term professional success. Discover where you're strong, where you need support, and how to build a foundation for sustainable career growth.</p>
         </div>
         
         <div class="intro-section">
             <h3>Why This Assessment Matters</h3>
-            <p>As an entrepreneur, your business can only grow as much as you do. Success isn't just about strategy—it's about having the personal foundation to execute consistently over the long haul.</p>
-            <p style="margin-top: 15px;">This assessment evaluates your capacity across five interconnected dimensions that research shows are essential for sustainable high performance in business and life.</p>
+            <p>As a professional, your career can only grow as much as you do. Success isn't just about strategy—it's about having the personal foundation to execute consistently over the long haul.</p>
+            <p style="margin-top: 15px;">This assessment evaluates your capacity across five interconnected dimensions that research shows are essential for sustainable high performance in your career and life.</p>
         </div>
         
         <div class="framework-note">
-            <strong>About This Framework:</strong> The V3TTA Sustainable Success Assessment synthesizes research from multiple fields including performance psychology, organizational behavior, habit science, and entrepreneurship studies. It draws on principles from energy management, deep work, emotional intelligence, systems thinking, and growth mindset research to provide a holistic view of your entrepreneurial capacity.
-        </div>
-        
-        <div class="dimensions-overview">
-            <div class="dimension-card">
-                <div class="dimension-icon">⚡</div>
-                <h4>Vitality</h4>
-                <p>Your physical foundation and recovery practices</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">🎯</div>
-                <h4>Execution</h4>
-                <p>Your ability to focus and get things done</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">🛡️</div>
-                <h4>Resilience</h4>
-                <p>Your capacity to handle stress and uncertainty</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">🤝</div>
-                <h4>Connection</h4>
-                <p>Your relationships and support systems</p>
-            </div>
-            <div class="dimension-card">
-                <div class="dimension-icon">🌟</div>
-                <h4>Vision</h4>
-                <p>Your clarity of purpose and direction</p>
-            </div>
+            <strong>About This Framework:</strong> The V3TTA Sustainable Success Assessment synthesizes research from multiple fields including performance psychology, organizational behavior, habit science, and professional development studies. It draws on principles from energy management, deep work, emotional intelligence, systems thinking, and growth mindset research to provide a holistic view of your professional capacity.
         </div>
         
         <div class="progress-indicator" id="progressIndicator" style="display: none;">
@@ -1249,19 +1221,12 @@
                 <div id="insightsContainer"></div>
             </div>
             
-            <div class="recommendations">
-                <h4>Your Growth Roadmap</h4>
-                <div id="recommendationsContainer"></div>
-            </div>
-            
             <div class="cta-section">
                 <h4>Ready to Build on This Foundation?</h4>
-                <p>V3TTA partners with entrepreneurs to strengthen these five dimensions through practical, hands-on guidance. We don't just advise—we execute alongside you.</p>
+                <p>V3TTA partners with professionals to strengthen these five dimensions through practical, hands-on guidance. Let's discuss how we can support your growth journey.</p>
                 <div class="cta-buttons">
-                    <a href="mailto:info@v3tta.com" class="cta-btn cta-btn-primary">Schedule a Free Consultation</a>
-                    <a href="https://v3tta.com" class="cta-btn cta-btn-secondary">Learn About V3TTA</a>
+                    <a href="https://calendly.com/contact-v3tta/30min" target="_blank" class="cta-btn cta-btn-primary">Schedule Your Free 30-Minute Consultation</a>
                 </div>
-                <button class="reset-btn" onclick="resetAssessment()">Retake Assessment</button>
             </div>
         </div>
     </div>
@@ -1337,11 +1302,74 @@
             const visionScore = (vision.reduce((a, b) => a + b, 0) / 20) * 100;
             const overallScore = (vitalityScore + executionScore + resilienceScore + connectionScore + visionScore) / 5;
             
+            // Send data to Google Sheets
+            sendToGoogleSheets(vitality, execution, resilience, connection, vision, vitalityScore, executionScore, resilienceScore, connectionScore, visionScore, overallScore);
+            
             // Display results
             displayResults(overallScore, vitalityScore, executionScore, resilienceScore, connectionScore, visionScore);
             
             // Scroll to results
             results.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function sendToGoogleSheets(vitality, execution, resilience, connection, vision, vitalityScore, executionScore, resilienceScore, connectionScore, visionScore, overallScore) {
+            // Prepare data for Google Sheets
+            const data = {
+                timestamp: new Date().toISOString(),
+                // Vitality questions (q1-q4)
+                q1: vitality[0],
+                q2: vitality[1],
+                q3: vitality[2],
+                q4: vitality[3],
+                // Execution questions (q5-q8)
+                q5: execution[0],
+                q6: execution[1],
+                q7: execution[2],
+                q8: execution[3],
+                // Resilience questions (q9-q12)
+                q9: resilience[0],
+                q10: resilience[1],
+                q11: resilience[2],
+                q12: resilience[3],
+                // Connection questions (q13-q16)
+                q13: connection[0],
+                q14: connection[1],
+                q15: connection[2],
+                q16: connection[3],
+                // Vision questions (q17-q20)
+                q17: vision[0],
+                q18: vision[1],
+                q19: vision[2],
+                q20: vision[3],
+                // Calculated scores
+                vitalityScore: Math.round(vitalityScore),
+                executionScore: Math.round(executionScore),
+                resilienceScore: Math.round(resilienceScore),
+                connectionScore: Math.round(connectionScore),
+                visionScore: Math.round(visionScore),
+                overallScore: Math.round(overallScore),
+                overallLabel: getOverallLabel(overallScore)
+            };
+            
+            // Google Apps Script URL for V3TTA Assessment Responses
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyCXJULXDEs6lUhw1U0IS7yDOXwyXSw4cbsSvVEdDCzhDNJEFb4wY0CtaRxzPoVCyyc/exec';
+            
+            // Submit to Google Sheets
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                console.log('Assessment data saved successfully');
+            })
+            .catch(error => {
+                console.error('Error saving assessment data:', error);
+                // Don't stop the user flow if there's an error
+            });
         }
         
         function displayResults(overall, vitality, execution, resilience, connection, vision) {
@@ -1361,9 +1389,6 @@
             
             // Generate insights
             generateInsights(overall, vitality, execution, resilience, connection, vision);
-            
-            // Generate recommendations
-            generateRecommendations(vitality, execution, resilience, connection, vision);
         }
         
         function displayDimensionScore(dimension, score) {
@@ -1381,7 +1406,7 @@
         }
         
         function getOverallLabel(score) {
-            if (score >= 85) return 'High-Capacity Entrepreneur';
+            if (score >= 85) return 'High-Capacity Professional';
             if (score >= 70) return 'Strong Foundation';
             if (score >= 55) return 'Building Momentum';
             if (score >= 40) return 'Growth Opportunity';
@@ -1478,94 +1503,6 @@
                     return 'You have gaps across multiple dimensions. Rather than feeling overwhelmed, see this as opportunity—you don\'t need to be perfect, just better. Pick one dimension, commit to improvement for 30 days, and build from there.';
                 }
             }
-        }
-        
-        function generateRecommendations(vitality, execution, resilience, connection, vision) {
-            const container = document.getElementById('recommendationsContainer');
-            container.innerHTML = '';
-            
-            const dimensions = [
-                { name: 'Vitality', score: vitality, icon: '⚡' },
-                { name: 'Execution', score: execution, icon: '🎯' },
-                { name: 'Resilience', score: resilience, icon: '🛡️' },
-                { name: 'Connection', score: connection, icon: '🤝' },
-                { name: 'Vision', score: vision, icon: '🌟' }
-            ];
-            
-            // Sort to prioritize lowest scores
-            dimensions.sort((a, b) => a.score - b.score);
-            
-            // Show top 3 priorities
-            const topPriorities = dimensions.slice(0, 3);
-            
-            topPriorities.forEach((dimension, index) => {
-                const recCategory = document.createElement('div');
-                recCategory.className = 'recommendation-category';
-                const priority = index === 0 ? 'Priority #1' : index === 1 ? 'Priority #2' : 'Priority #3';
-                recCategory.innerHTML = `
-                    <h5>${dimension.icon} ${priority}: ${dimension.name} Development</h5>
-                    <ul>
-                        ${getRecommendations(dimension.name).map(rec => `<li>${rec}</li>`).join('')}
-                    </ul>
-                `;
-                container.appendChild(recCategory);
-            });
-            
-            // Add implementation advice
-            const implementationAdvice = document.createElement('div');
-            implementationAdvice.className = 'insight-item';
-            implementationAdvice.style.marginTop = '25px';
-            implementationAdvice.innerHTML = `
-                <h5>💡 Implementation Strategy</h5>
-                <p><strong>Don't try to fix everything at once.</strong> Pick ONE action from your #1 priority dimension and commit to it for 30 days. Once it becomes automatic, add another. Small, consistent improvements compound into remarkable results. V3TTA can help you build this systematic approach to growth.</p>
-            `;
-            container.appendChild(implementationAdvice);
-        }
-        
-        function getRecommendations(dimension) {
-            const recommendations = {
-                'Vitality': [
-                    'Establish a non-negotiable sleep schedule: same bedtime/wake time daily, 7-8 hours minimum',
-                    'Schedule 20-30 minute movement breaks: walk, stretch, or light exercise to reset energy',
-                    'Implement "power hour" mornings: no phone/email for first hour, start with hydration and movement',
-                    'Create recovery rituals: end-of-workday shutdown routine to separate work from personal time'
-                ],
-                'Execution': [
-                    'Use time-blocking: schedule your top 3 priorities into specific calendar blocks each day',
-                    'Implement the "2-minute rule": if it takes less than 2 minutes, do it now; otherwise schedule or delegate',
-                    'Create a "deep work" protocol: 90-minute focused blocks with phone in another room, notifications off',
-                    'Weekly review process: every Sunday, review last week and plan next week\'s key priorities'
-                ],
-                'Resilience': [
-                    'Develop a "stress response plan": identify your triggers and predetermined healthy responses',
-                    'Practice daily reflection: 5-minute evening journal about wins, lessons, and gratitude',
-                    'Build a failure resumé: document setbacks and what you learned to normalize failure as part of growth',
-                    'Create "circuit breakers": activities that reliably reset your emotional state (exercise, music, nature)'
-                ],
-                'Connection': [
-                    'Schedule monthly "CEO peer sessions": regular meetings with other entrepreneurs for mutual support',
-                    'Practice "delegation planning": weekly review of tasks to delegate, with clear success criteria',
-                    'Implement "relationship rituals": regular check-ins with key personal relationships (partner, family, close friends)',
-                    'Join or create a mastermind group: 4-6 entrepreneurs meeting monthly for accountability and wisdom-sharing'
-                ],
-                'Vision': [
-                    'Quarterly strategic retreat: full day away from business to review vision, progress, and adjust strategy',
-                    'Write your "future self" letter: describe in detail where you want to be in 3 years, read monthly',
-                    'Define your core values: identify your top 5 non-negotiable values, use them to filter decisions',
-                    'Weekly "strategic hour": dedicated time for thinking, planning, and working ON the business, not IN it'
-                ]
-            };
-            
-            return recommendations[dimension];
-        }
-        
-        function resetAssessment() {
-            form.reset();
-            results.classList.remove('show');
-            progressIndicator.style.display = 'none';
-            progressBar.style.width = '0%';
-            progressPercent.textContent = '0%';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
