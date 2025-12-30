@@ -1086,31 +1086,55 @@
                 lookingFor = otherText ? `Other: ${otherText}` : 'Other';
             }
             
-            // Create email body
-            const emailBody = `New Potential Customer from Website Assessment:
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Age: ${age}
-Gender: ${gender}
-Looking for: ${lookingFor}
-
-Submitted: ${new Date().toLocaleString()}`;
+            // Prepare data for Google Sheets
+            const data = {
+                name: name,
+                email: email,
+                phone: phone,
+                age: age,
+                gender: gender,
+                lookingFor: lookingFor
+            };
             
-            // Create mailto link
-            const subject = 'Potential Customer';
-            const mailtoLink = `mailto:contact@v3tta.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            // Submit to Google Sheets
+            const scriptURL = 'https://script.google.com/a/macros/v3tta.com/s/AKfycbx6xbUE0I0ZwRKq-ZKa2XjJR-5XZj9vo807xeefSFQDjBmtcK1R4Pw8zZ8D18LXBaRM/exec';
             
-            // Open email client
-            window.location.href = mailtoLink;
+            // Show loading state
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = currentLanguage === 'en' ? 'Submitting...' : 'Enviando...';
+            submitButton.disabled = true;
             
-            // Hide form and show thank you message
-            document.getElementById('assessmentIntroForm').style.display = 'none';
-            document.getElementById('thank-you-message').style.display = 'block';
-            
-            // Scroll to thank you message
-            document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth' });
+            // Submit to Google Sheets
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                // Hide form and show thank you message
+                document.getElementById('assessmentIntroForm').style.display = 'none';
+                document.getElementById('thank-you-message').style.display = 'block';
+                
+                // Scroll to thank you message
+                document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Still show thank you message even if there's an error
+                // (no-cors mode doesn't let us see the actual response)
+                document.getElementById('assessmentIntroForm').style.display = 'none';
+                document.getElementById('thank-you-message').style.display = 'block';
+                document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth' });
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
         }
     </script>
 </body>
