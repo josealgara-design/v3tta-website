@@ -1313,8 +1313,35 @@
         }
         
         function sendToGoogleSheets(vitality, execution, resilience, connection, vision, vitalityScore, executionScore, resilienceScore, connectionScore, visionScore, overallScore) {
-            // Prepare data for Google Sheets
+            // Get user data from localStorage (from intro form)
+            let userData = {
+                name: 'Not provided',
+                email: 'Not provided',
+                phone: 'Not provided',
+                age: 'Not provided',
+                gender: 'Not provided',
+                lookingFor: 'Not provided'
+            };
+            
+            try {
+                const storedData = localStorage.getItem('v3tta_user_data');
+                if (storedData) {
+                    userData = JSON.parse(storedData);
+                }
+            } catch (error) {
+                console.log('No user data found in localStorage');
+            }
+            
+            // Prepare complete data for Google Sheets
             const data = {
+                // User info from intro form
+                name: userData.name,
+                email: userData.email,
+                phone: userData.phone,
+                age: userData.age,
+                gender: userData.gender,
+                lookingFor: userData.lookingFor,
+                // Assessment timestamp
                 timestamp: new Date().toISOString(),
                 // Vitality questions (q1-q4)
                 q1: vitality[0],
@@ -1351,7 +1378,7 @@
                 overallLabel: getOverallLabel(overallScore)
             };
             
-            // Google Apps Script URL for V3TTA Assessment Responses
+            // Google Apps Script URL - Combined data sheet
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyCXJULXDEs6lUhw1U0IS7yDOXwyXSw4cbsSvVEdDCzhDNJEFb4wY0CtaRxzPoVCyyc/exec';
             
             // Submit to Google Sheets
@@ -1365,6 +1392,8 @@
             })
             .then(() => {
                 console.log('Assessment data saved successfully');
+                // Clear localStorage after successful submission
+                localStorage.removeItem('v3tta_user_data');
             })
             .catch(error => {
                 console.error('Error saving assessment data:', error);

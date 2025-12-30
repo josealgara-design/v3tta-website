@@ -856,29 +856,29 @@
 
                 <div class="form-group">
                     <label data-en="What are you looking for?" data-es="¿Qué estás buscando?">What are you looking for? <span class="required">*</span></label>
-                    <div style="margin-bottom: 10px;">
-                        <div style="margin-bottom: 12px; display: flex; align-items: center;">
-                            <input type="radio" name="looking-for" id="career-growth" value="Career growth" required style="margin: 0 10px 0 0; flex-shrink: 0;">
-                            <label for="career-growth" style="font-weight: normal; margin: 0;" data-en="Career growth" data-es="Crecimiento profesional">Career growth</label>
+                    <div style="margin-top: 15px;">
+                        <div style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="radio" name="looking-for" id="career-growth" value="Career growth" required style="margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px;">
+                            <label for="career-growth" style="font-weight: normal; margin: 0; cursor: pointer; flex: 1;" data-en="Career growth" data-es="Crecimiento profesional">Career growth</label>
                         </div>
-                        <div style="margin-bottom: 12px; display: flex; align-items: center;">
-                            <input type="radio" name="looking-for" id="work-life" value="Achieve better work-life balance" style="margin: 0 10px 0 0; flex-shrink: 0;">
-                            <label for="work-life" style="font-weight: normal; margin: 0;" data-en="Achieve better work-life balance" data-es="Lograr mejor equilibrio trabajo-vida">Achieve better work-life balance</label>
+                        <div style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="radio" name="looking-for" id="work-life" value="Achieve better work-life balance" style="margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px;">
+                            <label for="work-life" style="font-weight: normal; margin: 0; cursor: pointer; flex: 1;" data-en="Achieve better work-life balance" data-es="Lograr mejor equilibrio trabajo-vida">Achieve better work-life balance</label>
                         </div>
-                        <div style="margin-bottom: 12px; display: flex; align-items: center;">
-                            <input type="radio" name="looking-for" id="relationships" value="Better relationships at work" style="margin: 0 10px 0 0; flex-shrink: 0;">
-                            <label for="relationships" style="font-weight: normal; margin: 0;" data-en="Better relationships at work" data-es="Mejores relaciones en el trabajo">Better relationships at work</label>
+                        <div style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="radio" name="looking-for" id="relationships" value="Better relationships at work" style="margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px;">
+                            <label for="relationships" style="font-weight: normal; margin: 0; cursor: pointer; flex: 1;" data-en="Better relationships at work" data-es="Mejores relaciones en el trabajo">Better relationships at work</label>
                         </div>
-                        <div style="margin-bottom: 12px; display: flex; align-items: center;">
-                            <input type="radio" name="looking-for" id="presence" value="Be more present both at work and in my personal life" style="margin: 0 10px 0 0; flex-shrink: 0;">
-                            <label for="presence" style="font-weight: normal; margin: 0;" data-en="Be more present both at work and in my personal life" data-es="Estar más presente en el trabajo y en mi vida personal">Be more present both at work and in my personal life</label>
+                        <div style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="radio" name="looking-for" id="presence" value="Be more present both at work and in my personal life" style="margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px;">
+                            <label for="presence" style="font-weight: normal; margin: 0; cursor: pointer; flex: 1;" data-en="Be more present both at work and in my personal life" data-es="Estar más presente en el trabajo y en mi vida personal">Be more present both at work and in my personal life</label>
                         </div>
-                        <div style="margin-bottom: 12px; display: flex; align-items: center;">
-                            <input type="radio" name="looking-for" id="other" value="Other" style="margin: 0 10px 0 0; flex-shrink: 0;" onchange="toggleOtherField()">
-                            <label for="other" style="font-weight: normal; margin: 0;" data-en="Other" data-es="Otro">Other</label>
+                        <div style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="radio" name="looking-for" id="other" value="Other" style="margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px;" onchange="toggleOtherField()">
+                            <label for="other" style="font-weight: normal; margin: 0; cursor: pointer; flex: 1;" data-en="Other" data-es="Otro">Other</label>
                         </div>
                     </div>
-                    <div id="other-field" style="display: none; margin-top: 10px;">
+                    <div id="other-field" style="display: none; margin-top: 15px;">
                         <textarea name="looking-for-other" id="intro-other" placeholder="Please describe what you're looking for..." data-en-placeholder="Please describe what you're looking for..." data-es-placeholder="Por favor describe qué estás buscando..." style="width: 100%; padding: 12px; border: 1px solid #DDD; border-radius: 5px; font-size: 16px; font-family: inherit; min-height: 80px;"></textarea>
                     </div>
                 </div>
@@ -1041,55 +1041,21 @@
                 lookingFor = otherText ? `Other: ${otherText}` : 'Other';
             }
             
-            // Prepare data for Google Sheets
-            const data = {
+            // Store data in localStorage to pass to assessment page
+            const userData = {
                 name: name,
                 email: email,
                 phone: phone,
                 age: age,
                 gender: gender,
-                lookingFor: lookingFor
+                lookingFor: lookingFor,
+                timestamp: new Date().toISOString()
             };
             
-            // Submit to Google Sheets
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxXPZpdJXz52jUmGOEd6gbV6D4BwPNv5R2T6rYfAb38DAcBNQY4VxTqWGHabt5SFngx/exec';
+            localStorage.setItem('v3tta_user_data', JSON.stringify(userData));
             
-            // Show loading state
-            const submitButton = event.target.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = currentLanguage === 'en' ? 'Submitting...' : 'Enviando...';
-            submitButton.disabled = true;
-            
-            // Submit to Google Sheets
-            fetch(scriptURL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(() => {
-                // Hide form and show thank you message
-                document.getElementById('assessmentIntroForm').style.display = 'none';
-                document.getElementById('thank-you-message').style.display = 'block';
-                
-                // Scroll to thank you message
-                document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth' });
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Still show thank you message even if there's an error
-                // (no-cors mode doesn't let us see the actual response)
-                document.getElementById('assessmentIntroForm').style.display = 'none';
-                document.getElementById('thank-you-message').style.display = 'block';
-                document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth' });
-            })
-            .finally(() => {
-                // Reset button state
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            });
+            // Redirect to assessment page
+            window.location.href = 'assessment.html';
         }
     </script>
 </body>
