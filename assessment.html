@@ -1325,11 +1325,13 @@
             
             try {
                 const storedData = localStorage.getItem('v3tta_user_data');
+                console.log('Raw localStorage data:', storedData);
                 if (storedData) {
                     userData = JSON.parse(storedData);
+                    console.log('Parsed user data:', userData);
                 }
             } catch (error) {
-                console.log('No user data found in localStorage');
+                console.error('Error reading localStorage:', error);
             }
             
             // Prepare complete data for Google Sheets
@@ -1375,8 +1377,11 @@
                 connectionScore: Math.round(connectionScore),
                 visionScore: Math.round(visionScore),
                 overallScore: Math.round(overallScore),
-                overallLabel: getOverallLabel(overallScore)
+                overallLabel: getOverallLabel(overallScore),
+                status: 'Complete Assessment'  // Mark as full assessment
             };
+            
+            console.log('Sending complete data to Google Sheets:', data);
             
             // Google Apps Script URL - Combined data sheet
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyCXJULXDEs6lUhw1U0IS7yDOXwyXSw4cbsSvVEdDCzhDNJEFb4wY0CtaRxzPoVCyyc/exec';

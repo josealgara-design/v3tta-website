@@ -1041,7 +1041,7 @@
                 lookingFor = otherText ? `Other: ${otherText}` : 'Other';
             }
             
-            // Store data in localStorage to pass to assessment page
+            // Store data in localStorage for the assessment page
             const userData = {
                 name: name,
                 email: email,
@@ -1054,8 +1054,44 @@
             
             localStorage.setItem('v3tta_user_data', JSON.stringify(userData));
             
-            // Redirect to assessment page
-            window.location.href = 'assessment.html';
+            // Prepare data for Google Sheets (intro form submission)
+            const data = {
+                name: name,
+                email: email,
+                phone: phone,
+                age: age,
+                gender: gender,
+                lookingFor: lookingFor,
+                status: 'Intro Form Only'  // Mark this as just the intro
+            };
+            
+            // Submit to Google Sheets
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxXPZpdJXz52jUmGOEd6gbV6D4BwPNv5R2T6rYfAb38DAcBNQY4VxTqWGHabt5SFngx/exec';
+            
+            // Show loading state
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = currentLanguage === 'en' ? 'Submitting...' : 'Enviando...';
+            submitButton.disabled = true;
+            
+            // Submit to Google Sheets
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                // Redirect directly to assessment page
+                window.location.href = 'assessment.html';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Redirect anyway - data is in localStorage
+                window.location.href = 'assessment.html';
+            });
         }
     </script>
 </body>
