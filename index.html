@@ -201,7 +201,7 @@
             font-weight: bold;
         }
 
-        /* Services Carousel */
+        /* Services Section */
         .services-section {
             padding: 80px 0;
             background-color: #FDFBF7;
@@ -210,112 +210,13 @@
         .services-section h2 {
             font-size: 36px;
             color: #2C3E50;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .service-card {
-            min-width: 100%;
-            padding: 50px 60px;
-            background-color: #FFF;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
-        .service-card h3 {
-            font-size: 32px;
-            color: #2C3E50;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .service-card p {
-            font-size: 18px;
-            color: #666;
             margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .service-card .cta {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #3d4f5c;
-            color: #FFF;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .service-card .cta:hover {
-            background-color: #2C3E50;
-        }
-
-        .carousel-dots {
             text-align: center;
-            margin-top: 30px;
-        }
-
-        .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #DDD;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .dot.active {
-            background-color: #3d4f5c;
-        }
-
-        /* Detail Sections */
-        .detail-section {
-            display: none;
-            padding: 80px 0;
-            background-color: #FFF;
-        }
-
-        .detail-section.active {
-            display: block;
         }
 
         .detail-content {
             max-width: 900px;
             margin: 0 auto;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #3d4f5c;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .back-btn:hover {
-            color: #2C3E50;
         }
 
         .detail-content h2 {
@@ -388,105 +289,6 @@
         }
 
         .btn-primary:hover {
-            background-color: #2C3E50;
-        }
-
-        .btn-secondary {
-            background-color: #FFF;
-            color: #3d4f5c;
-            border: 2px solid #3d4f5c;
-        }
-
-        .btn-secondary:hover {
-            background-color: #3d4f5c;
-            color: #FFF;
-        }
-
-        /* Questionnaire Section */
-        .questionnaire-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #F5F1E8 0%, #FFF 100%);
-        }
-
-        .questionnaire-section h2 {
-            font-size: 36px;
-            color: #2C3E50;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .questionnaire-intro {
-            text-align: center;
-            font-size: 18px;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .questionnaire-form {
-            max-width: 700px;
-            margin: 0 auto;
-            background-color: #FFF;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            color: #2C3E50;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        .form-group label .required {
-            color: #e74c3c;
-            margin-left: 3px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #DDD;
-            border-radius: 5px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #3d4f5c;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: #3d4f5c;
-            color: #FFF;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .submit-btn:hover {
             background-color: #2C3E50;
         }
 
@@ -575,8 +377,8 @@
                 font-size: 18px;
             }
 
-            .service-card h3 {
-                font-size: 24px;
+            .detail-content h2 {
+                font-size: 28px;
             }
 
             .cta-buttons {
@@ -610,12 +412,10 @@
                 </div>
                 <nav>
                     <a href="#services" data-en="Services" data-es="Servicios">Services</a>
-                    <a href="#who-we-are" data-en="Who We Are" data-es="Quiénes Somos">Who We Are</a>
-                    <a href="assessment.html" data-en="Free Assessment" data-es="Evaluación Gratis">Free Assessment</a>
+                    <a href="#who-we-are" data-en="About Me" data-es="Sobre Mí">About Me</a>
+                    <a href="assessment.html" data-en="Tell Me About You" data-es="Cuéntame de Ti">Tell Me About You</a>
                     <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
-                    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
                     <a href="https://portal.v3tta.com/login" data-en="Client Login" data-es="Acceso Clientes">Client Login</a>
-                    <a href="https://portal.v3tta.com/client-signup" data-en="Create Account" data-es="Crear Cuenta">Create Account</a>
                     <div class="lang-switcher">
                         <span class="lang-separator">|</span>
                         <button onclick="switchLanguage('en')" class="active" id="lang-en">English</button>
@@ -636,39 +436,41 @@
             <p class="subtitle" data-en="Personalized guidance for your career journey." data-es="Guía personalizada para tu trayectoria profesional.">
                 Personalized guidance for your career journey.
             </p>
-            <p class="tagline" data-en="We don't just advise - we partner. We don't just strategize - we execute. We don't just consult - we commit to your growth." data-es="No solo asesoramos - somos socios. No solo planificamos estratégicamente - ejecutamos. No solo consultamos - nos comprometemos con tu crecimiento.">
-                We don't just advise - we partner. We don't just strategize - we execute. We don't just consult - we commit to your growth.
+            <p class="tagline" data-en="I don't just advise - I partner. I don't just strategize - I execute. I don't just consult - I commit to your growth." data-es="No solo asesoro - soy tu socio. No solo planifico estratégicamente - ejecuto. No solo consulto - me comprometo con tu crecimiento.">
+                I don't just advise - I partner. I don't just strategize - I execute. I don't just consult - I commit to your growth.
             </p>
         </div>
     </section>
 
-    <!-- Who We Are Section -->
+    <!-- About Me Section -->
     <section class="who-we-are" id="who-we-are">
         <div class="container">
-            <h2 data-en="Who We Are" data-es="Quiénes Somos">Who We Are</h2>
+            <h2 data-en="About Me" data-es="Sobre Mí">About Me</h2>
             <div class="founder-grid">
                 <div class="founder-bio">
-                    <h3 data-en="Our Team" data-es="Nuestro Equipo">Our Team</h3>
-                    
-                    <p data-en="With over 20 years of combined experience in corporate leadership, our team brings real-world insight and strategic expertise to V3TTA. Our background spans Fortune 500 operations across multiple industries, and helping professionals build successful, sustainable careers." data-es="Con más de 20 años de experiencia combinada en liderazgo corporativo, nuestro equipo aporta conocimiento del mundo real y experiencia estratégica a V3TTA. Nuestra experiencia abarca operaciones Fortune 500 en múltiples industrias, y ayudar a profesionales a construir carreras exitosas y sostenibles.">
-                        With over 20 years of combined experience in corporate leadership, our team brings real-world insight and strategic expertise to V3TTA. Our background spans Fortune 500 operations across multiple industries, and helping professionals build successful, sustainable careers.
+                    <h3 data-en="Jose Algara" data-es="Jose Algara">Jose Algara</h3>
+
+                    <p data-en="I'm Jose Algara. Over the past 15+ years I've built and led teams at Amazon, Nordstrom, Maersk, and Flexport — most recently as Vice President of Supply Chain &amp; Inventory Product at Nordstrom, where I lead the company's transformation to an AI-native operating model." data-es="Soy Jose Algara. En los últimos más de 15 años he construido y liderado equipos en Amazon, Nordstrom, Maersk y Flexport — más recientemente como Vicepresidente de Cadena de Suministro e Inventario en Nordstrom, donde lidero la transformación de la empresa hacia un modelo operativo nativo en IA.">
+                        I'm Jose Algara. Over the past 15+ years I've built and led teams at Amazon, Nordstrom, Maersk, and Flexport — most recently as Vice President of Supply Chain &amp; Inventory Product at Nordstrom, where I lead the company's transformation to an AI-native operating model.
                     </p>
 
-                    <p data-en="We have led teams at companies like Amazon, Nordstrom, Maersk, and Flexport, across operations, logistics, and strategy. This breadth of experience allows us to guide you whether you're advancing in your current path, changing industries, or charting a completely new direction." data-es="Hemos liderado equipos en empresas como Amazon, Nordstrom, Maersk y Flexport, en áreas de operaciones, logística y estrategia. Esta amplia experiencia nos permite guiarte ya sea que estés avanzando en tu camino actual, cambiando de industria o trazando una dirección completamente nueva.">
-                        We have led teams at companies like Amazon, Nordstrom, Maersk, and Flexport, across operations, logistics, and strategy. This breadth of experience allows us to guide you whether you're advancing in your current path, changing industries, or charting a completely new direction.
+                    <p data-en="After Nordstrom's Chief Product Officer departed, I took on the expanded mandate to lead the broader product organization's shift away from manual, siloed workflows toward an integrated, AI-orchestrated model. I've taken agentic AI solutions into live production across inventory control, vendor compliance, and finance — cutting costs and saving millions of dollars, while sharply compressing the time it takes to go from an idea to a solution in production." data-es="Tras la salida del Chief Product Officer de Nordstrom, asumí el mandato ampliado de liderar la transformación de la organización de producto en general, dejando atrás flujos de trabajo manuales y fragmentados hacia un modelo integrado y orquestado por IA. He llevado soluciones de IA agéntica a producción en control de inventario, cumplimiento de proveedores y finanzas — reduciendo costos y ahorrando millones de dólares, mientras comprimo drásticamente el tiempo que toma pasar de una idea a una solución en producción.">
+                        After Nordstrom's Chief Product Officer departed, I took on the expanded mandate to lead the broader product organization's shift away from manual, siloed workflows toward an integrated, AI-orchestrated model. I've taken agentic AI solutions into live production across inventory control, vendor compliance, and finance — cutting costs and saving millions of dollars, while sharply compressing the time it takes to go from an idea to a solution in production.
                     </p>
 
                     <div class="highlights">
                         <h4 data-en="Experience Highlights:" data-es="Aspectos Destacados de Experiencia:">Experience Highlights:</h4>
                         <ul>
-                            <li data-en="Led operations at Amazon, building teams from 1 to 300+ people" data-es="Lideramos operaciones en Amazon, construyendo equipos de 1 a más de 300 personas">Led operations at Amazon, building teams from 1 to 300+ people</li>
-                            <li data-en="Managed multi-billion dollar P&L at global logistics companies" data-es="Gestionamos P&L multimillonario en empresas de logística global">Managed multi-billion dollar P&L at global logistics companies</li>
-                            <li data-en="Specialized in leadership development, career transitions, and strategic planning" data-es="Especializados en desarrollo de liderazgo, transiciones de carrera y planificación estratégica">Specialized in leadership development, career transitions, and strategic planning</li>
+                            <li data-en="Currently VP of Supply Chain &amp; Inventory Product at Nordstrom, leading the company's AI-native transformation" data-es="Actualmente Vicepresidente de Cadena de Suministro e Inventario en Nordstrom, liderando la transformación nativa en IA de la empresa">Currently VP of Supply Chain &amp; Inventory Product at Nordstrom, leading the company's AI-native transformation</li>
+                            <li data-en="Built and launched agentic AI solutions now in production, saving millions in operating costs" data-es="Construí y lancé soluciones de IA agéntica ahora en producción, ahorrando millones en costos operativos">Built and launched agentic AI solutions now in production, saving millions in operating costs</li>
+                            <li data-en="Co-owned a $64.3B P&amp;L at Maersk; led Amazon's grocery distribution product from a team of 1 to 300" data-es="Co-propietario de un P&amp;L de $64.3B en Maersk; lideré el producto de distribución de comestibles de Amazon de un equipo de 1 a 300">Co-owned a $64.3B P&amp;L at Maersk; led Amazon's grocery distribution product from a team of 1 to 300</li>
+                            <li data-en="Founded and scaled a startup to the largest taxi fleet in Latin America (50,000+ vehicles), acquired by Cabify" data-es="Fundé y escalé una startup hasta convertirla en la flota de taxis más grande de Latinoamérica (50,000+ vehículos), adquirida por Cabify">Founded and scaled a startup to the largest taxi fleet in Latin America (50,000+ vehicles), acquired by Cabify</li>
+                            <li data-en="MBA, IE Business School (top 5% of class); B.S. Mechatronic Engineering, ITESM; two Amazon patents" data-es="MBA, IE Business School (5% superior de la clase); Ingeniería Mecatrónica, ITESM; dos patentes de Amazon">MBA, IE Business School (top 5% of class); B.S. Mechatronic Engineering, ITESM; two Amazon patents</li>
                         </ul>
                     </div>
 
-                    <p data-en="At V3TTA, we apply this Fortune 500 rigor and hands-on leadership experience to help professionals find clarity, make confident career moves, and achieve sustainable growth." data-es="En V3TTA, aplicamos este rigor de Fortune 500 y experiencia práctica de liderazgo para ayudar a profesionales a encontrar claridad, hacer movimientos de carrera seguros y lograr crecimiento sostenible.">
-                        At V3TTA, we apply this Fortune 500 rigor and hands-on leadership experience to help professionals find clarity, make confident career moves, and achieve sustainable growth.
+                    <p data-en="I built my career being the person organizations turn to when they need to move fast, build real capability, and ship. That's what I bring to coaching — real operating experience, not theory, whether you're navigating a career shift or figuring out how to lead in the age of AI." data-es="Construí mi carrera siendo la persona a la que las organizaciones acuden cuando necesitan moverse rápido, construir capacidad real y ejecutar. Eso es lo que aporto al coaching — experiencia operativa real, no teoría, ya sea que estés navegando un cambio de carrera o descubriendo cómo liderar en la era de la IA.">
+                        I built my career being the person organizations turn to when they need to move fast, build real capability, and ship. That's what I bring to coaching — real operating experience, not theory, whether you're navigating a career shift or figuring out how to lead in the age of AI.
                     </p>
                 </div>
             </div>
@@ -678,139 +480,31 @@
     <!-- Services Section -->
     <section class="services-section" id="services">
         <div class="container">
-            <h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
-            <div class="carousel-container">
-                <div class="carousel" id="carousel">
-                    <!-- Service 1: Find Your Direction -->
-                    <div class="service-card" onclick="showDetail(1)">
-                        <h3 data-en="Find Your Direction" data-es="Encuentra Tu Dirección">Find Your Direction</h3>
-                        <p data-en="Gain clarity on your career path through comprehensive assessment and exploration. We help you identify your strengths, values, and goals to create a roadmap for your professional future." data-es="Obtén claridad sobre tu trayectoria profesional a través de evaluación y exploración integral. Te ayudamos a identificar tus fortalezas, valores y objetivos para crear una hoja de ruta para tu futuro profesional.">
-                            Gain clarity on your career path through comprehensive assessment and exploration. We help you identify your strengths, values, and goals to create a roadmap for your professional future.
-                        </p>
-                        <a href="#" class="cta" data-en="Learn More" data-es="Saber Más">Learn More</a>
-                    </div>
+            <div class="detail-content" style="max-width: 900px; margin: 0 auto;">
+                <h2 data-en="Lead in the Age of AI" data-es="Lidera en la Era de la IA" style="text-align: center;">Lead in the Age of AI</h2>
 
-                    <!-- Service 2: Launch Your Future -->
-                    <div class="service-card" onclick="showDetail(2)">
-                        <h3 data-en="Launch Your Future" data-es="Lanza Tu Futuro">Launch Your Future</h3>
-                        <p data-en="Make confident career moves with strategic planning and execution support. Whether you're changing industries, pursuing a promotion, or stepping into a new role, we guide you through the transition." data-es="Realiza movimientos de carrera seguros con planificación estratégica y soporte de ejecución. Ya sea que estés cambiando de industria, buscando un ascenso o dando el paso a un nuevo puesto, te guiamos a través de la transición.">
-                            Make confident career moves with strategic planning and execution support. Whether you're changing industries, pursuing a promotion, or stepping into a new role, we guide you through the transition.
-                        </p>
-                        <a href="#" class="cta" data-en="Learn More" data-es="Saber Más">Learn More</a>
-                    </div>
-
-                    <!-- Service 3: Grow Your Success -->
-                    <div class="service-card" onclick="showDetail(3)">
-                        <h3 data-en="Grow Your Success" data-es="Crece Tu Éxito">Grow Your Success</h3>
-                        <p data-en="Achieve sustainable growth through leadership development, skill enhancement, and strategic advancement. We help you build the capabilities and mindset needed to reach new levels of professional excellence." data-es="Logra crecimiento sostenible a través de desarrollo de liderazgo, mejora de habilidades y avance estratégico. Te ayudamos a desarrollar las capacidades y mentalidad necesarias para alcanzar nuevos niveles de excelencia profesional.">
-                            Achieve sustainable growth through leadership development, skill enhancement, and strategic advancement. We help you build the capabilities and mindset needed to reach new levels of professional excellence.
-                        </p>
-                        <a href="#" class="cta" data-en="Learn More" data-es="Saber Más">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="moveCarousel(0)"></span>
-                <span class="dot" onclick="moveCarousel(1)"></span>
-                <span class="dot" onclick="moveCarousel(2)"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detail Section 1: Find Your Direction -->
-    <section class="detail-section" id="launch">
-        <div class="container">
-            <div class="detail-content">
-                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;" data-en="← Back to Services" data-es="← Volver a Servicios">← Back to Services</a>
-                
-                <h2 data-en="Find Your Direction - Career Clarity & Assessment" data-es="Encuentra Tu Dirección - Claridad y Evaluación de Carrera">Find Your Direction - Career Clarity & Assessment</h2>
-                
-                <p data-en="Feeling stuck or uncertain about your career path? Our Find Your Direction service provides comprehensive assessment and strategic exploration to help you gain clarity on your professional future. We combine proven frameworks with personalized guidance to illuminate your path forward." data-es="¿Te sientes estancado o inseguro sobre tu trayectoria profesional? Nuestro servicio Encuentra Tu Dirección proporciona evaluación integral y exploración estratégica para ayudarte a obtener claridad sobre tu futuro profesional. Combinamos marcos probados con orientación personalizada para iluminar tu camino.">
-                    Feeling stuck or uncertain about your career path? Our Find Your Direction service provides comprehensive assessment and strategic exploration to help you gain clarity on your professional future. We combine proven frameworks with personalized guidance to illuminate your path forward.
+                <p data-en="Personalized coaching for career growth, career shifts, and learning to navigate — and lead — in an AI-transformed workplace." data-es="Coaching personalizado para el crecimiento profesional, cambios de carrera, y aprender a navegar — y liderar — en un lugar de trabajo transformado por la IA." style="text-align: center; font-size: 20px; color: #3d4f5c;">
+                    Personalized coaching for career growth, career shifts, and learning to navigate — and lead — in an AI-transformed workplace.
                 </p>
 
-                <h3 data-en="What We Cover" data-es="Lo Que Cubrimos">What We Cover</h3>
+                <p data-en="AI is changing how every organization operates, and the professionals who learn to lead through that shift — not just survive it — are the ones who grow fastest. I coach professionals at every career stage: directors and executives looking to leverage AI to lead more effectively and drive real business results, and early-career professionals learning how to navigate corporate development in a world where the rules are being rewritten. Drawing on 15+ years of hands-on AI/ML experience — including building a new product-tech development lifecycle that takes ideas to production in weeks, not quarters, and launching agentic AI solutions that have saved millions in operating costs — I bring real, current experience to every conversation, not theory." data-es="La IA está cambiando la forma en que operan las organizaciones, y los profesionales que aprenden a liderar ese cambio — no solo a sobrevivirlo — son los que crecen más rápido. Doy coaching a profesionales en todas las etapas de su carrera: directores y ejecutivos que buscan aprovechar la IA para liderar de forma más efectiva e impulsar resultados de negocio reales, y profesionales en etapas tempranas de su carrera que están aprendiendo a navegar el desarrollo corporativo en un mundo donde las reglas se están reescribiendo. Con más de 15 años de experiencia práctica en IA/ML — incluyendo la construcción de un nuevo ciclo de vida de desarrollo de producto y tecnología que lleva ideas a producción en semanas, no trimestres, y el lanzamiento de soluciones de IA agéntica que han ahorrado millones en costos operativos — aporto experiencia real y actual a cada conversación, no teoría.">
+                    AI is changing how every organization operates, and the professionals who learn to lead through that shift — not just survive it — are the ones who grow fastest. I coach professionals at every career stage: directors and executives looking to leverage AI to lead more effectively and drive real business results, and early-career professionals learning how to navigate corporate development in a world where the rules are being rewritten. Drawing on 15+ years of hands-on AI/ML experience — including building a new product-tech development lifecycle that takes ideas to production in weeks, not quarters, and launching agentic AI solutions that have saved millions in operating costs — I bring real, current experience to every conversation, not theory.
+                </p>
+
+                <h3 data-en="What This Covers" data-es="Esto Incluye">What This Covers</h3>
                 <ul>
-                    <li><strong>Strengths & Skills Assessment:</strong> Identify your core competencies and unique value proposition</li>
-                    <li><strong>Values & Motivations Discovery:</strong> Understand what truly drives and fulfills you professionally</li>
-                    <li><strong>Career Exploration:</strong> Research and evaluate potential career paths and industries</li>
-                    <li><strong>Gap Analysis:</strong> Identify skills and experiences needed for your desired direction</li>
-                    <li><strong>Personal Branding:</strong> Develop your professional narrative and positioning</li>
-                    <li><strong>Strategic Roadmap:</strong> Create a clear action plan with milestones and timelines</li>
+                    <li data-en="Career Clarity &amp; Direction — identify your strengths, values, and goals, and build a roadmap for your professional future" data-es="Claridad y Dirección Profesional — identifica tus fortalezas, valores y objetivos, y construye una hoja de ruta para tu futuro profesional"><strong>Career Clarity &amp; Direction</strong> — identify your strengths, values, and goals, and build a roadmap for your professional future</li>
+                    <li data-en="Career Transitions — strategic planning and hands-on support for industry changes, promotions, or stepping into a new role" data-es="Transiciones de Carrera — planificación estratégica y apoyo práctico para cambios de industria, ascensos, o dar el paso a un nuevo puesto"><strong>Career Transitions</strong> — strategic planning and hands-on support for industry changes, promotions, or stepping into a new role</li>
+                    <li data-en="Leadership Development — build the executive presence, strategic thinking, and influence needed for your next level" data-es="Desarrollo de Liderazgo — desarrolla la presencia ejecutiva, el pensamiento estratégico y la influencia necesarios para tu próximo nivel"><strong>Leadership Development</strong> — build the executive presence, strategic thinking, and influence needed for your next level</li>
+                    <li data-en="AI Fluency &amp; Strategy — learn how to leverage AI to improve your own performance and build better solutions and processes for your organization" data-es="Fluidez y Estrategia en IA — aprende a aprovechar la IA para mejorar tu propio desempeño y construir mejores soluciones y procesos para tu organización"><strong>AI Fluency &amp; Strategy</strong> — learn how to leverage AI to improve your own performance and build better solutions and processes for your organization</li>
+                    <li data-en="Corporate Navigation — for early-career professionals, practical guidance on how to build and grow a career inside a company" data-es="Navegación Corporativa — para profesionales en etapas tempranas, orientación práctica sobre cómo construir y hacer crecer una carrera dentro de una empresa"><strong>Corporate Navigation</strong> — for early-career professionals, practical guidance on how to build and grow a career inside a company</li>
                 </ul>
 
                 <div class="cta-section">
-                    <h3 data-en="Ready to Find Your Direction?" data-es="¿Listo Para Encontrar Tu Dirección?">Ready to Find Your Direction?</h3>
-                    <p data-en="Let's uncover your path to professional fulfillment" data-es="Descubramos tu camino hacia la realización profesional">Let's uncover your path to professional fulfillment</p>
+                    <h3 data-en="Ready to Lead in the Age of AI?" data-es="¿Listo Para Liderar en la Era de la IA?">Ready to Lead in the Age of AI?</h3>
+                    <p data-en="Let's talk about where you are and where you want to go." data-es="Hablemos de dónde estás y hacia dónde quieres ir.">Let's talk about where you are and where you want to go.</p>
                     <div class="cta-buttons">
-                        <a href="mailto:info@v3tta.com" class="btn btn-primary">Send Us an Email</a>
-                        <a href="#assessment" class="btn btn-secondary">Take Assessment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detail Section 2: Launch Your Future -->
-    <section class="detail-section" id="acquire">
-        <div class="container">
-            <div class="detail-content">
-                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;">← Back to Services</a>
-                
-                <h2>Launch Your Future - Career Transitions & Strategic Moves</h2>
-                
-                <p>Ready to make a bold career move but not sure how to navigate the transition? Our Launch Your Future service provides strategic planning and hands-on support for professionals making significant career changes. Whether you're switching industries, pursuing a leadership role, or navigating a major promotion, we guide you through every step.</p>
-
-                <h3>What We Support</h3>
-                <ul>
-                    <li><strong>Transition Strategy:</strong> Develop a comprehensive plan for your career move with risk mitigation</li>
-                    <li><strong>Industry Research:</strong> Deep dive into your target industry, culture, and requirements</li>
-                    <li><strong>Resume & LinkedIn Optimization:</strong> Position yourself effectively for your new direction</li>
-                    <li><strong>Interview Preparation:</strong> Master storytelling and positioning for career changers</li>
-                    <li><strong>Negotiation Strategy:</strong> Navigate offers, compensation, and terms with confidence</li>
-                    <li><strong>Network Building:</strong> Strategic networking and relationship-building in your new field</li>
-                    <li><strong>First 90 Days Planning:</strong> Set yourself up for success in your new role</li>
-                </ul>
-
-                <div class="cta-section">
-                    <h3>Ready to Launch Your Future?</h3>
-                    <p>Let's create your strategic transition plan and make it happen</p>
-                    <div class="cta-buttons">
-                        <a href="mailto:info@v3tta.com" class="btn btn-primary">Send Us an Email</a>
-                        <a href="#assessment" class="btn btn-secondary">Take Assessment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detail Section 3: Grow Your Success -->
-    <section class="detail-section" id="grow">
-        <div class="container">
-            <div class="detail-content">
-                <a href="#services" class="back-btn" onclick="hideAllDetails(); return false;">← Back to Services</a>
-                
-                <h2>Grow Your Success - Leadership Development & Career Advancement</h2>
-                
-                <p>You've established your career foundation—now it's time to reach new heights. Our Grow Your Success service helps ambitious professionals build the leadership capabilities, strategic mindset, and executive presence needed for sustained career advancement and long-term success.</p>
-
-                <h3>What We Develop</h3>
-                <ul>
-                    <li><strong>Leadership Skills:</strong> Build executive presence, communication mastery, and influence</li>
-                    <li><strong>Strategic Thinking:</strong> Develop big-picture vision and strategic decision-making capabilities</li>
-                    <li><strong>Skill Enhancement:</strong> Identify and acquire high-value skills for your next level</li>
-                    <li><strong>Performance Optimization:</strong> Maximize impact and visibility in your current role</li>
-                    <li><strong>Team Leadership:</strong> Master delegation, motivation, and high-performance team building</li>
-                    <li><strong>Executive Presence:</strong> Command respect and influence at senior levels</li>
-                    <li><strong>Career Acceleration Plan:</strong> Strategic roadmap for promotion and advancement</li>
-                </ul>
-
-                <div class="cta-section">
-                    <h3>Ready to Grow Your Success?</h3>
-                    <p>Let's unlock your full leadership potential and accelerate your career</p>
-                    <div class="cta-buttons">
-                        <a href="mailto:info@v3tta.com" class="btn btn-primary">Send Us an Email</a>
-                        <a href="#assessment" class="btn btn-secondary">Take Assessment</a>
+                        <a href="assessment.html" class="btn btn-primary" data-en="Tell Me About You" data-es="Cuéntame de Ti">Tell Me About You</a>
                     </div>
                 </div>
             </div>
@@ -823,84 +517,49 @@
             <h2 data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
             
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="Who do you work with?" data-es="¿Con quién trabajan?">Who do you work with?</div>
-                <div class="faq-answer" data-en="We work with ambitious professionals at all career stages—from recent graduates seeking direction to senior executives preparing for C-suite roles. Whether you're in tech, finance, healthcare, or any other industry, our frameworks can be adapted to your specific situation." data-es="Trabajamos con profesionales ambiciosos en todas las etapas de carrera, desde recién graduados buscando dirección hasta ejecutivos senior preparándose para roles de alta dirección. Ya sea que estés en tecnología, finanzas, salud o cualquier otra industria, nuestros marcos pueden adaptarse a tu situación específica.">We work with ambitious professionals at all career stages—from recent graduates seeking direction to senior executives preparing for C-suite roles. Whether you're in tech, finance, healthcare, or any other industry, our frameworks can be adapted to your specific situation.</div>
+                <div class="faq-question" data-en="Who do you work with?" data-es="¿Con quién trabajas?">Who do you work with?</div>
+                <div class="faq-answer" data-en="I work with ambitious professionals at every career stage — from those early in their career learning how to navigate corporate development, to directors and executives leading through AI transformation. Whether you're in tech, retail, logistics, or any other industry, my frameworks can be adapted to your specific situation." data-es="Trabajo con profesionales ambiciosos en todas las etapas de su carrera — desde quienes están comenzando y aprendiendo a navegar el desarrollo corporativo, hasta directores y ejecutivos liderando la transformación de IA. Ya sea que estés en tecnología, retail, logística o cualquier otra industria, mis marcos de trabajo pueden adaptarse a tu situación específica.">I work with ambitious professionals at every career stage — from those early in their career learning how to navigate corporate development, to directors and executives leading through AI transformation. Whether you're in tech, retail, logistics, or any other industry, my frameworks can be adapted to your specific situation.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
                 <div class="faq-question" data-en="How long does a typical engagement last?" data-es="¿Cuánto dura un compromiso típico?">How long does a typical engagement last?</div>
-                <div class="faq-answer" data-en="Engagement length varies based on your goals. Career clarity sessions typically take 4-6 weeks, transition planning 8-12 weeks, and ongoing leadership development 3-6 months. We customize the timeline to your needs and pace." data-es="La duración varía según tus objetivos. Las sesiones de claridad profesional generalmente toman 4-6 semanas, planificación de transición 8-12 semanas, y desarrollo de liderazgo continuo 3-6 meses. Personalizamos el cronograma según tus necesidades y ritmo.">Engagement length varies based on your goals. Career clarity sessions typically take 4-6 weeks, transition planning 8-12 weeks, and ongoing leadership development 3-6 months. We customize the timeline to your needs and pace.</div>
+                <div class="faq-answer" data-en="Engagement length varies based on your goals. Career clarity sessions typically take 4-6 weeks, transition planning 8-12 weeks, and ongoing leadership or AI-strategy coaching 3-6 months. I customize the timeline to your needs and pace." data-es="La duración varía según tus objetivos. Las sesiones de claridad profesional generalmente toman 4-6 semanas, planificación de transición 8-12 semanas, y coaching continuo de liderazgo o estrategia de IA 3-6 meses. Personalizo el cronograma según tus necesidades y ritmo.">Engagement length varies based on your goals. Career clarity sessions typically take 4-6 weeks, transition planning 8-12 weeks, and ongoing leadership or AI-strategy coaching 3-6 months. I customize the timeline to your needs and pace.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="What's included in your services?" data-es="¿Qué incluyen sus servicios?">What's included in your services?</div>
-                <div class="faq-answer" data-en="Our services include personalized assessments, one-on-one coaching sessions, strategic planning tools, resume and LinkedIn optimization, interview preparation, accountability check-ins, and customized resources. You get comprehensive support tailored to your specific career goals." data-es="Nuestros servicios incluyen evaluaciones personalizadas, sesiones de coaching uno a uno, herramientas de planificación estratégica, optimización de currículum y LinkedIn, preparación para entrevistas, seguimiento de responsabilidad y recursos personalizados. Obtienes soporte integral adaptado a tus objetivos profesionales específicos.">Our services include personalized assessments, one-on-one coaching sessions, strategic planning tools, resume and LinkedIn optimization, interview preparation, accountability check-ins, and customized resources. You get comprehensive support tailored to your specific career goals.</div>
+                <div class="faq-question" data-en="What's included in your services?" data-es="¿Qué incluye tu coaching?">What's included in your services?</div>
+                <div class="faq-answer" data-en="My coaching includes personalized assessments, one-on-one sessions, strategic planning tools, resume and LinkedIn optimization, interview preparation, accountability check-ins, and customized resources — plus, where relevant, guidance on how to leverage AI in your own role and career. You get comprehensive support tailored to your specific goals." data-es="Mi coaching incluye evaluaciones personalizadas, sesiones uno a uno, herramientas de planificación estratégica, optimización de currículum y LinkedIn, preparación para entrevistas, seguimiento de responsabilidad y recursos personalizados — además, cuando es relevante, orientación sobre cómo aprovechar la IA en tu propio rol y carrera. Obtienes soporte integral adaptado a tus objetivos específicos.">My coaching includes personalized assessments, one-on-one sessions, strategic planning tools, resume and LinkedIn optimization, interview preparation, accountability check-ins, and customized resources — plus, where relevant, guidance on how to leverage AI in your own role and career. You get comprehensive support tailored to your specific goals.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="Do you provide ongoing support?" data-es="¿Proporcionan soporte continuo?">Do you provide ongoing support?</div>
-                <div class="faq-answer" data-en="Yes! We offer ongoing coaching retainers, monthly check-ins, and on-demand support for professionals who want continuous guidance as they advance in their careers. Many clients stay with us for years as trusted advisors." data-es="¡Sí! Ofrecemos retención de coaching continuo, seguimientos mensuales y soporte bajo demanda para profesionales que desean orientación continua mientras avanzan en sus carreras. Muchos clientes se quedan con nosotros durante años como asesores de confianza.">Yes! We offer ongoing coaching retainers, monthly check-ins, and on-demand support for professionals who want continuous guidance as they advance in their careers. Many clients stay with us for years as trusted advisors.</div>
+                <div class="faq-question" data-en="Do you provide ongoing support?" data-es="¿Ofreces soporte continuo?">Do you provide ongoing support?</div>
+                <div class="faq-answer" data-en="Yes! I offer ongoing coaching retainers, monthly check-ins, and on-demand support for professionals who want continuous guidance as they advance in their careers. Many clients stay with me for years as a trusted advisor." data-es="¡Sí! Ofrezco retención de coaching continuo, seguimientos mensuales y soporte bajo demanda para profesionales que desean orientación continua mientras avanzan en sus carreras. Muchos clientes se quedan conmigo durante años como asesor de confianza.">Yes! I offer ongoing coaching retainers, monthly check-ins, and on-demand support for professionals who want continuous guidance as they advance in their careers. Many clients stay with me for years as a trusted advisor.</div>
             </div>
 
             <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question" data-en="What makes your approach different?" data-es="¿Qué hace diferente su enfoque?">What makes your approach different?</div>
-                <div class="faq-answer" data-en="We combine Fortune 500 corporate insight with personalized, hands-on coaching. You get strategic frameworks proven in the corporate world, paired with individual attention tailored to your specific goals. We focus on practical, actionable strategies—not just theory—and commit to your success every step of the way." data-es="Combinamos conocimiento corporativo Fortune 500 con coaching personalizado y práctico. Obtienes marcos estratégicos probados en el mundo corporativo, junto con atención individual adaptada a tus objetivos específicos. Nos enfocamos en estrategias prácticas y accionables, no solo teoría, y nos comprometemos con tu éxito en cada paso del camino.">We combine Fortune 500 corporate insight with personalized, hands-on coaching. You get strategic frameworks proven in the corporate world, paired with individual attention tailored to your specific goals. We focus on practical, actionable strategies—not just theory—and commit to your success every step of the way.</div>
+                <div class="faq-question" data-en="What makes your approach different?" data-es="¿Qué hace diferente tu enfoque?">What makes your approach different?</div>
+                <div class="faq-answer" data-en="I bring current, hands-on experience leading AI-native transformation at a Fortune 500 company — not secondhand theory. You get strategic frameworks proven in the corporate world, paired with real, individual attention tailored to your specific goals. I focus on practical, actionable strategies, and commit to your success every step of the way." data-es="Aporto experiencia actual y práctica liderando la transformación nativa en IA en una empresa Fortune 500 — no teoría de segunda mano. Obtienes marcos estratégicos probados en el mundo corporativo, junto con atención individual real adaptada a tus objetivos específicos. Me enfoco en estrategias prácticas y accionables, y me comprometo con tu éxito en cada paso del camino.">I bring current, hands-on experience leading AI-native transformation at a Fortune 500 company — not secondhand theory. You get strategic frameworks proven in the corporate world, paired with real, individual attention tailored to your specific goals. I focus on practical, actionable strategies, and commit to your success every step of the way.</div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <p>&copy; 2025 V3TTA. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 14px;">Find | Launch | Grow - Empowering professionals to reach new heights.</p>
-            <p style="margin-top: 10px;"><a href="mailto:info@v3tta.com" style="color: #FFF; text-decoration: none;">info@v3tta.com</a></p>
+            <p style="margin-top: 10px; font-size: 14px;" data-en="Find | Launch | Grow - Helping you reach new heights." data-es="Encuentra | Lanza | Crece - Ayudándote a alcanzar nuevas alturas.">Find | Launch | Grow - Helping you reach new heights.</p>
+            <p style="margin-top: 10px; font-size: 13px;" data-en="Prefer email? Reach me directly at" data-es="¿Prefieres correo? Escríbeme directamente a">Prefer email? Reach me directly at</p>
+            <p style="margin-top: 5px;"><a href="mailto:info@v3tta.com" style="color: #FFF; text-decoration: none;">info@v3tta.com</a></p>
         </div>
     </footer>
 
     <script>
-        let currentSlide = 0;
         let currentLanguage = 'en';
-
-        function moveCarousel(index) {
-            const carousel = document.getElementById('carousel');
-            const dots = document.querySelectorAll('.dot');
-            currentSlide = index;
-            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
-        }
-
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % 3;
-            moveCarousel(currentSlide);
-        }, 5000);
-
-        function showDetail(section) {
-            document.querySelector('.services-section').style.display = 'none';
-            document.querySelector('.who-we-are').style.display = 'none';
-            document.querySelectorAll('.detail-section').forEach(s => s.classList.remove('active'));
-            const sections = ['launch', 'acquire', 'grow'];
-            document.getElementById(sections[section - 1]).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function hideAllDetails() {
-            document.querySelector('.services-section').style.display = 'block';
-            document.querySelector('.who-we-are').style.display = 'block';
-            document.querySelectorAll('.detail-section').forEach(s => s.classList.remove('active'));
-            document.querySelector('.services-section').scrollIntoView({ behavior: 'smooth' });
-        }
 
         function toggleFAQ(element) {
             const wasActive = element.classList.contains('active');
             document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
             if (!wasActive) element.classList.add('active');
-        }
-
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for your submission! We\'ll be in touch soon.');
-            event.target.reset();
         }
 
         function switchLanguage(lang) {
@@ -927,114 +586,6 @@
             });
         }
 
-        // Toggle "Other" text field visibility
-        function toggleOtherField() {
-            const otherRadio = document.getElementById('other');
-            const otherField = document.getElementById('other-field');
-            if (otherRadio.checked) {
-                otherField.style.display = 'block';
-            } else {
-                otherField.style.display = 'none';
-            }
-        }
-
-        // Handle assessment intro form submission
-        function handleAssessmentIntro(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(event.target);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const age = formData.get('age');
-            const gender = formData.get('gender');
-            let lookingFor = formData.get('looking-for');
-            
-            // If "Other" was selected, use the text from the textarea
-            if (lookingFor === 'Other') {
-                const otherText = formData.get('looking-for-other');
-                lookingFor = otherText ? `Other: ${otherText}` : 'Other';
-            }
-            
-            // Store data in localStorage for the assessment page
-            const userData = {
-                name: name,
-                email: email,
-                phone: phone,
-                age: age,
-                gender: gender,
-                lookingFor: lookingFor,
-                timestamp: new Date().toISOString()
-            };
-            
-            // Store in localStorage
-            try {
-                localStorage.setItem('v3tta_user_data', JSON.stringify(userData));
-                console.log('✅ Data stored in localStorage:', userData);
-            } catch(e) {
-                console.error('❌ Failed to store in localStorage:', e);
-            }
-            
-            // ALSO store in sessionStorage as backup
-            try {
-                sessionStorage.setItem('v3tta_user_data', JSON.stringify(userData));
-                console.log('✅ Data stored in sessionStorage as backup');
-            } catch(e) {
-                console.error('❌ Failed to store in sessionStorage:', e);
-            }
-            
-            // Prepare data for Google Sheets (intro form submission)
-            const data = {
-                name: name,
-                email: email,
-                phone: phone,
-                age: age,
-                gender: gender,
-                lookingFor: lookingFor,
-                status: 'Intro Form Only'  // Mark this as just the intro
-            };
-            
-            // Submit to Google Sheets
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxXPZpdJXz52jUmGOEd6gbV6D4BwPNv5R2T6rYfAb38DAcBNQY4VxTqWGHabt5SFngx/exec';
-            
-            // Show loading state
-            const submitButton = event.target.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = currentLanguage === 'en' ? 'Submitting...' : 'Enviando...';
-            submitButton.disabled = true;
-            
-            // Submit to Google Sheets (background)
-            fetch(scriptURL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(() => {
-                console.log('✅ Intro form data sent to Google Sheets');
-            })
-            .catch(error => {
-                console.error('❌ Error sending intro form:', error);
-            });
-            
-            // Redirect to assessment page with data in URL as extra backup
-            const params = new URLSearchParams({
-                n: encodeURIComponent(name),
-                e: encodeURIComponent(email),
-                p: encodeURIComponent(phone),
-                a: age,
-                g: gender,
-                l: encodeURIComponent(lookingFor)
-            });
-            
-            // Small delay to let the Google Sheets call start, then redirect
-            setTimeout(() => {
-                window.location.href = 'assessment.html?' + params.toString();
-            }, 500);
-        }
     </script>
 </body>
 </html>
